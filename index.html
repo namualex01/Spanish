@@ -283,6 +283,71 @@
       align-content: center;
     }
 
+    .flash-shell {
+      perspective: 1200px;
+    }
+
+    .flashcard {
+      min-height: 220px;
+      border-radius: 22px;
+      border: 1px solid rgba(99,102,241,.2);
+      background: #fff;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 10px 30px rgba(15,23,42,.07);
+    }
+
+    .flashcard::before {
+      content: "点击翻卡";
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      font-size: 12px;
+      color: var(--muted);
+      z-index: 2;
+    }
+
+    .flash-inner {
+      position: relative;
+      width: 100%;
+      min-height: 220px;
+      transition: transform .45s ease;
+      transform-style: preserve-3d;
+    }
+
+    .flashcard.flipped .flash-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flash-face {
+      position: absolute;
+      inset: 0;
+      padding: 18px;
+      display: grid;
+      align-content: center;
+      gap: 8px;
+      border-radius: inherit;
+      backface-visibility: hidden;
+    }
+
+    .flash-face.back {
+      transform: rotateY(180deg);
+      background: linear-gradient(180deg, #f8f8ff 0%, #eef2ff 100%);
+    }
+
+    .flashcard.spell-mode::before {
+      content: "拼写题面";
+    }
+
+    .flashcard.spell-mode .flash-inner {
+      transform: none !important;
+    }
+
+    .flashcard.spell-mode .flash-face.back {
+      display: none;
+    }
+
     .section-title {
       font-size: 12px;
       color: var(--muted);
@@ -501,15 +566,14 @@
         <div>
           <h1>西班牙语单词背诵</h1>
           <p>
-            单文件版本，支持读取同目录下 4 个 JSON 单词库、按册数与单元筛选、闪卡模式、拼写模式、随机切换、发音，以及手机适配。
-            你上传的 txt 是一个 Quizlet 单词卡页面源码片段，我这里没有直接照搬，而是按同类学习页的交互思路重写成了纯前端可本地部署版本。
+            专注高频词汇记忆，支持按册数/单元筛选、闪卡与拼写练习、错词回顾、发音和移动端学习。
           </p>
         </div>
         <div class="pill-row">
-          <span class="pill">纯前端</span>
-          <span class="pill">支持 4 个 JSON</span>
-          <span class="pill">手机适配</span>
-          <span class="pill">支持发音</span>
+          <span class="pill">闪卡训练</span>
+          <span class="pill">拼写练习</span>
+          <span class="pill">错词复习</span>
+          <span class="pill">语音朗读</span>
         </div>
       </div>
     </section>
@@ -547,6 +611,7 @@
             <label class="toggle"><input id="shuffleToggle" type="checkbox" /> 随机顺序</label>
             <label class="toggle"><input id="autoSpeakToggle" type="checkbox" /> 切卡自动朗读</label>
             <label class="toggle"><input id="showNoteToggle" type="checkbox" checked /> 显示备注/例句</label>
+            <label class="toggle"><input id="showDetailToggle" type="checkbox" checked /> 显示当前词条信息</label>
             <label class="toggle"><input id="onlyWrongToggle" type="checkbox" /> 仅复习答错词</label>
           </div>
         </div>
@@ -593,10 +658,21 @@
 
         <div class="progress"><span id="progressBar"></span></div>
 
-        <div class="prompt-wrap">
-          <div class="section-title">题面</div>
-          <div class="prompt" id="promptText">请先读取 JSON 单词库</div>
-          <div class="subtext" id="promptSubtext">支持西语→中文、中文→西语，以及拼写模式。</div>
+        <div class="flash-shell" id="flashShell">
+          <div class="flashcard" id="flashCard">
+            <div class="flash-inner">
+              <div class="flash-face front">
+                <div class="section-title">题面</div>
+                <div class="prompt" id="promptText">请先读取 JSON 单词库</div>
+                <div class="subtext" id="promptSubtext">支持西语→中文、中文→西语，以及拼写模式。</div>
+              </div>
+              <div class="flash-face back">
+                <div class="section-title">答案</div>
+                <div class="prompt" id="flashAnswer">点击翻面查看答案</div>
+                <div class="subtext">可用“我会了 / 再记一遍”快速推进</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -624,8 +700,8 @@
         </div>
       </div>
 
-      <div class="side">
-        <div class="side-card">
+        <div class="side">
+        <div class="side-card" id="detailCard">
           <h3>当前词条信息</h3>
           <div class="list" id="detailList">
             <div class="mini-item"><strong>尚未加载</strong><div class="muted">读取 JSON 后会显示词性、备注、例句等内容。</div></div>
@@ -636,6 +712,32 @@
           <h3>本轮错词本</h3>
           <div class="list" id="wrongList">
             <div class="mini-item"><strong>暂无错词</strong><div class="muted">在拼写模式或“再记一遍”时会自动加入。</div></div>
+          </div>
+        </div>
+
+        <div class="side-card">
+          <h3>西语歌词学习</h3>
+          <div class="list" style="margin-bottom:10px;">
+            <label class="toggle" for="lyricImport">导入歌词 JSON</label>
+            <input class="hidden" id="lyricImport" type="file" accept="application/json,.json" />
+          </div>
+          <div class="field full" style="margin-bottom:10px;">
+            <label for="lyricSongSelect">歌曲</label>
+            <select id="lyricSongSelect">
+              <option value="">未导入</option>
+            </select>
+          </div>
+          <div class="action-row" style="margin-bottom:10px;">
+            <button class="btn" id="lyricPrevBtn" type="button">上一句</button>
+            <button class="btn" id="lyricNextBtn" type="button">下一句</button>
+            <button class="btn" id="lyricRandomBtn" type="button">随机</button>
+          </div>
+          <div class="mini-item">
+            <strong id="lyricLineEs">导入后开始学习歌词</strong>
+            <div class="muted" id="lyricLineZh">支持西语/中文双语行。</div>
+            <div class="action-row" style="margin-top:8px;">
+              <button class="btn" id="lyricRevealBtn" type="button">显示翻译</button>
+            </div>
           </div>
         </div>
 
@@ -675,6 +777,7 @@
 
   <script>
     // 你只需要按实际文件名改这里。
+    const PROGRESS_STORAGE_KEY = 'spanish_flash_progress_v1';
     const LIBRARIES = [
       { id: '1', name: '第一册', file: 'vocab1.json' },
       { id: '2', name: '第二册', file: 'vocab2.json' },
@@ -696,9 +799,16 @@
       shuffle: false,
       autoSpeak: false,
       showNote: true,
+      showDetail: true,
       onlyWrong: false,
       currentIndex: 0,
       answerVisible: false,
+      activeFilterKey: '',
+      progressByFilter: new Map(),
+      lyricSongs: [],
+      lyricSongIndex: 0,
+      lyricLineIndex: 0,
+      lyricReveal: false,
       stats: {
         seen: 0,
         correct: 0,
@@ -716,6 +826,7 @@
       shuffleToggle: $('shuffleToggle'),
       autoSpeakToggle: $('autoSpeakToggle'),
       showNoteToggle: $('showNoteToggle'),
+      showDetailToggle: $('showDetailToggle'),
       onlyWrongToggle: $('onlyWrongToggle'),
       reloadBtn: $('reloadBtn'),
       resetProgressBtn: $('resetProgressBtn'),
@@ -730,6 +841,9 @@
       cardIndexText: $('cardIndexText'),
       promptText: $('promptText'),
       promptSubtext: $('promptSubtext'),
+      flashShell: $('flashShell'),
+      flashCard: $('flashCard'),
+      flashAnswer: $('flashAnswer'),
       answerBox: $('answerBox'),
       spellBox: $('spellBox'),
       spellInput: $('spellInput'),
@@ -741,10 +855,75 @@
       knowBtn: $('knowBtn'),
       againBtn: $('againBtn'),
       randomBtn: $('randomBtn'),
+      detailCard: $('detailCard'),
       detailList: $('detailList'),
       wrongList: $('wrongList'),
-      progressBar: $('progressBar')
+      progressBar: $('progressBar'),
+      lyricImport: $('lyricImport'),
+      lyricSongSelect: $('lyricSongSelect'),
+      lyricPrevBtn: $('lyricPrevBtn'),
+      lyricNextBtn: $('lyricNextBtn'),
+      lyricRandomBtn: $('lyricRandomBtn'),
+      lyricRevealBtn: $('lyricRevealBtn'),
+      lyricLineEs: $('lyricLineEs'),
+      lyricLineZh: $('lyricLineZh')
     };
+
+    function buildFilterKey() {
+      return [
+        state.currentBook,
+        state.currentUnit,
+        state.currentMode,
+        state.currentDirection,
+        state.searchText.trim().toLowerCase(),
+        state.onlyWrong ? '1' : '0',
+        state.shuffle ? '1' : '0'
+      ].join('|');
+    }
+
+    function saveProgressForActiveKey() {
+      if (!state.activeFilterKey) return;
+      state.progressByFilter.set(state.activeFilterKey, {
+        currentIndex: state.currentIndex,
+        stats: { ...state.stats }
+      });
+    }
+
+    function restoreProgressForKey(key) {
+      const saved = state.progressByFilter.get(key);
+      if (!saved) {
+        state.currentIndex = 0;
+        state.stats = { seen: 0, correct: 0, wrong: 0 };
+        return;
+      }
+      state.currentIndex = saved.currentIndex || 0;
+      state.stats = {
+        seen: saved.stats?.seen || 0,
+        correct: saved.stats?.correct || 0,
+        wrong: saved.stats?.wrong || 0
+      };
+    }
+
+    function persistProgressStore() {
+      saveProgressForActiveKey();
+      try {
+        const payload = {
+          progressByFilter: Object.fromEntries(state.progressByFilter.entries())
+        };
+        localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(payload));
+      } catch (_) {}
+    }
+
+    function hydrateProgressStore() {
+      try {
+        const text = localStorage.getItem(PROGRESS_STORAGE_KEY);
+        if (!text) return;
+        const parsed = JSON.parse(text);
+        const raw = parsed && typeof parsed === 'object' ? parsed.progressByFilter : null;
+        if (!raw || typeof raw !== 'object') return;
+        state.progressByFilter = new Map(Object.entries(raw));
+      } catch (_) {}
+    }
 
     function escapeHtml(value) {
       return String(value ?? '')
@@ -899,6 +1078,7 @@
     }
 
     function applyFilters(resetIndex = false) {
+      saveProgressForActiveKey();
       let list = [...state.allWords];
       if (state.currentBook !== 'all') list = list.filter((item) => item.bookId === state.currentBook);
       if (state.currentUnit !== 'all') list = list.filter((item) => item.unit === state.currentUnit);
@@ -918,8 +1098,11 @@
 
       if (state.shuffle) list = shuffleArray(list);
       state.filteredWords = list;
+      const key = buildFilterKey();
+      restoreProgressForKey(key);
+      state.activeFilterKey = key;
 
-      if (resetIndex) state.currentIndex = 0;
+      if (resetIndex && !state.progressByFilter.has(key)) state.currentIndex = 0;
       if (state.currentIndex >= state.filteredWords.length) state.currentIndex = Math.max(0, state.filteredWords.length - 1);
       state.answerVisible = false;
       resetSpellBox();
@@ -946,10 +1129,10 @@
 
       els.statLibrary.textContent = currentBookLabel;
       els.statCount.textContent = String(total);
-      els.statProgress.textContent = `${total ? state.currentIndex + 1 : 0} / ${total}`;
+      els.statProgress.textContent = `${seen} / ${total}`;
       els.statAccuracy.textContent = `${accuracy}%`;
 
-      const progress = total ? ((state.currentIndex + 1) / total) * 100 : 0;
+      const progress = total ? (seen / total) * 100 : 0;
       els.progressBar.style.width = `${progress}%`;
     }
 
@@ -963,9 +1146,14 @@
         };
       }
 
+      const isSpellMode = state.currentMode === 'spell';
       const isEsToZh = state.currentDirection === 'es-zh';
-      const prompt = isEsToZh ? (word.spanish || '（无西语字段）') : (word.chinese || '（无中文字段）');
-      const answer = isEsToZh ? (word.chinese || '（无中文字段）') : (word.spanish || '（无西语字段）');
+      const prompt = isSpellMode
+        ? (word.chinese || '（无中文字段）')
+        : (isEsToZh ? (word.spanish || '（无西语字段）') : (word.chinese || '（无中文字段）'));
+      const answer = isSpellMode
+        ? (word.spanish || '（无西语字段）')
+        : (isEsToZh ? (word.chinese || '（无中文字段）') : (word.spanish || '（无西语字段）'));
       const subParts = [];
       if (word.ipa) subParts.push(`音标：${word.ipa}`);
       if (word.pos) subParts.push(`词性：${word.pos}`);
@@ -974,7 +1162,9 @@
       return {
         tag: `${getBookName(word.bookId)} · Unit ${word.unit}`,
         prompt,
-        promptSubtext: subParts.join('  ·  ') || '可点击“朗读当前单词”播放西语发音。',
+        promptSubtext: isSpellMode
+          ? '请根据题面输入对应的西语拼写。'
+          : (subParts.join('  ·  ') || '可点击“朗读当前单词”播放西语发音。'),
         answer
       };
     }
@@ -988,18 +1178,29 @@
       els.promptSubtext.textContent = pack.promptSubtext;
 
       if (state.currentMode === 'spell') {
+        els.flashShell.classList.remove('hidden');
+        els.flashCard.classList.add('spell-mode');
+        els.answerBox.parentElement.classList.remove('hidden');
         els.spellBox.classList.add('active');
         els.revealBtn.textContent = '显示答案';
       } else {
+        els.flashShell.classList.remove('hidden');
+        els.flashCard.classList.remove('spell-mode');
+        els.answerBox.parentElement.classList.add('hidden');
         els.spellBox.classList.remove('active');
-        els.revealBtn.textContent = state.answerVisible ? '隐藏答案' : '显示答案';
+        els.revealBtn.textContent = state.answerVisible ? '翻回题面' : '翻卡看答案';
       }
 
       if (!word) {
         els.answerBox.className = 'answer hidden';
         els.answerBox.textContent = '点击“显示答案”后查看';
+        els.flashAnswer.textContent = '点击翻面查看答案';
+        els.flashCard.classList.toggle('flipped', false);
         return;
       }
+
+      els.flashAnswer.textContent = pack.answer;
+      els.flashCard.classList.toggle('flipped', state.currentMode === 'flash' && state.answerVisible);
 
       if (state.answerVisible) {
         els.answerBox.className = 'answer';
@@ -1054,6 +1255,109 @@
       renderCard();
       renderDetails();
       renderWrongList();
+      renderLyrics();
+      els.detailCard.classList.toggle('hidden', !state.showDetail || state.currentMode === 'flash');
+      persistProgressStore();
+    }
+
+    function pickLyricField(obj, keys, fallback = '') {
+      if (!obj || typeof obj !== 'object') return fallback;
+      for (const key of keys) {
+        const value = obj[key];
+        if (value !== undefined && value !== null && String(value).trim() !== '') return String(value).trim();
+      }
+      return fallback;
+    }
+
+    function normalizeLyricsData(json) {
+      const toLines = (lines) => (Array.isArray(lines) ? lines.map((line) => ({
+        es: pickLyricField(line, ['es', 'spanish', 'line', 'text', 'lyric']),
+        zh: pickLyricField(line, ['zh', 'chinese', 'translation', 'meaning', 'cn'])
+      })).filter((line) => line.es || line.zh) : []);
+
+      if (Array.isArray(json)) {
+        if (json[0] && Array.isArray(json[0].lines)) {
+          return json.map((song, idx) => ({
+            title: pickLyricField(song, ['title', 'name', 'song'], `歌曲 ${idx + 1}`),
+            lines: toLines(song.lines)
+          })).filter((song) => song.lines.length);
+        }
+        return [{ title: '导入歌曲', lines: toLines(json) }].filter((song) => song.lines.length);
+      }
+
+      if (json && typeof json === 'object' && Array.isArray(json.songs)) {
+        return json.songs.map((song, idx) => ({
+          title: pickLyricField(song, ['title', 'name', 'song'], `歌曲 ${idx + 1}`),
+          lines: toLines(song.lines || song.items || song.data)
+        })).filter((song) => song.lines.length);
+      }
+
+      return [];
+    }
+
+    function getCurrentLyricLine() {
+      const song = state.lyricSongs[state.lyricSongIndex];
+      if (!song || !song.lines.length) return null;
+      return song.lines[state.lyricLineIndex] || null;
+    }
+
+    function renderLyrics() {
+      if (!state.lyricSongs.length) {
+        els.lyricSongSelect.innerHTML = '<option value="">未导入</option>';
+        els.lyricLineEs.textContent = '导入后开始学习歌词';
+        els.lyricLineZh.textContent = '支持西语/中文双语行。';
+        return;
+      }
+
+      els.lyricSongSelect.innerHTML = state.lyricSongs.map((song, idx) => (
+        `<option value="${idx}">${escapeHtml(song.title)}（${song.lines.length}句）</option>`
+      )).join('');
+      els.lyricSongSelect.value = String(state.lyricSongIndex);
+
+      const line = getCurrentLyricLine();
+      if (!line) {
+        els.lyricLineEs.textContent = '当前歌曲暂无歌词行';
+        els.lyricLineZh.textContent = '';
+        return;
+      }
+      els.lyricLineEs.textContent = line.es || '（无西语行）';
+      els.lyricLineZh.textContent = state.lyricReveal ? (line.zh || '（无中文翻译）') : '点击“显示翻译”查看中文';
+      els.lyricRevealBtn.textContent = state.lyricReveal ? '隐藏翻译' : '显示翻译';
+    }
+
+    async function importLyricsFromFile(file) {
+      if (!file) return;
+      try {
+        const text = await file.text();
+        const json = JSON.parse(text);
+        const songs = normalizeLyricsData(json);
+        if (!songs.length) throw new Error('未识别到可用歌词，请检查 JSON 字段');
+        state.lyricSongs = songs;
+        state.lyricSongIndex = 0;
+        state.lyricLineIndex = 0;
+        state.lyricReveal = false;
+        renderLyrics();
+      } catch (error) {
+        alert(`歌词导入失败：${error.message}`);
+      }
+    }
+
+    function stepLyric(step) {
+      const song = state.lyricSongs[state.lyricSongIndex];
+      if (!song || !song.lines.length) return;
+      state.lyricLineIndex += step;
+      if (state.lyricLineIndex < 0) state.lyricLineIndex = 0;
+      if (state.lyricLineIndex >= song.lines.length) state.lyricLineIndex = song.lines.length - 1;
+      state.lyricReveal = false;
+      renderLyrics();
+    }
+
+    function randomLyric() {
+      const song = state.lyricSongs[state.lyricSongIndex];
+      if (!song || !song.lines.length) return;
+      state.lyricLineIndex = Math.floor(Math.random() * song.lines.length);
+      state.lyricReveal = false;
+      renderLyrics();
     }
 
     function resetSpellBox() {
@@ -1141,7 +1445,7 @@
       const word = getCurrentWord();
       if (!word) return;
       const userValue = normalizeSpell(els.spellInput.value);
-      const correctAnswer = normalizeSpell(state.currentDirection === 'es-zh' ? word.chinese : word.spanish);
+      const correctAnswer = normalizeSpell(word.spanish);
       if (!userValue) {
         els.spellFeedback.textContent = '请先输入答案。';
         els.spellFeedback.className = 'feedback bad';
@@ -1177,6 +1481,8 @@
     }
 
     function resetProgress() {
+      const key = buildFilterKey();
+      state.progressByFilter.delete(key);
       state.currentIndex = 0;
       state.answerVisible = false;
       state.wrongWords.clear();
@@ -1230,6 +1536,11 @@
         renderDetails();
       });
 
+      els.showDetailToggle.addEventListener('change', () => {
+        state.showDetail = els.showDetailToggle.checked;
+        renderAll();
+      });
+
       els.onlyWrongToggle.addEventListener('change', () => {
         state.onlyWrong = els.onlyWrongToggle.checked;
         applyFilters(true);
@@ -1242,6 +1553,9 @@
         if (word) speakText(word.spanish || word.chinese);
       });
       els.revealBtn.addEventListener('click', () => revealAnswer());
+      els.flashCard.addEventListener('click', () => {
+        if (state.currentMode === 'flash') revealAnswer();
+      });
       els.prevBtn.addEventListener('click', () => moveCard(-1));
       els.nextBtn.addEventListener('click', () => moveCard(1));
       els.knowBtn.addEventListener('click', () => markKnown(true));
@@ -1263,6 +1577,21 @@
         input.addEventListener('change', (event) => importLibraryFromFile(id, event.target.files[0]));
       });
 
+      els.lyricImport.addEventListener('change', (event) => importLyricsFromFile(event.target.files[0]));
+      els.lyricSongSelect.addEventListener('change', () => {
+        state.lyricSongIndex = Number(els.lyricSongSelect.value) || 0;
+        state.lyricLineIndex = 0;
+        state.lyricReveal = false;
+        renderLyrics();
+      });
+      els.lyricPrevBtn.addEventListener('click', () => stepLyric(-1));
+      els.lyricNextBtn.addEventListener('click', () => stepLyric(1));
+      els.lyricRandomBtn.addEventListener('click', randomLyric);
+      els.lyricRevealBtn.addEventListener('click', () => {
+        state.lyricReveal = !state.lyricReveal;
+        renderLyrics();
+      });
+
       document.addEventListener('keydown', (event) => {
         const activeTag = document.activeElement?.tagName?.toLowerCase();
         const typing = activeTag === 'input' || activeTag === 'textarea' || document.activeElement?.isContentEditable;
@@ -1278,12 +1607,19 @@
           const word = getCurrentWord();
           if (word) speakText(word.spanish || word.chinese);
         }
+        if (event.key === 'Enter' && state.currentMode === 'flash') {
+          revealAnswer();
+        }
+        if (event.key.toLowerCase() === 'f' && state.currentMode === 'flash') {
+          revealAnswer();
+        }
       });
 
       if (window.speechSynthesis) window.speechSynthesis.onvoiceschanged = () => {};
     }
 
     function init() {
+      hydrateProgressStore();
       bindEvents();
       rebuildBookOptions();
       renderAll();
