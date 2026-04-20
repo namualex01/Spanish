@@ -283,6 +283,59 @@
       align-content: center;
     }
 
+    .flash-shell {
+      perspective: 1200px;
+    }
+
+    .flashcard {
+      min-height: 220px;
+      border-radius: 22px;
+      border: 1px solid rgba(99,102,241,.2);
+      background: #fff;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 10px 30px rgba(15,23,42,.07);
+    }
+
+    .flashcard::before {
+      content: "点击翻卡";
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      font-size: 12px;
+      color: var(--muted);
+      z-index: 2;
+    }
+
+    .flash-inner {
+      position: relative;
+      width: 100%;
+      min-height: 220px;
+      transition: transform .45s ease;
+      transform-style: preserve-3d;
+    }
+
+    .flashcard.flipped .flash-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flash-face {
+      position: absolute;
+      inset: 0;
+      padding: 18px;
+      display: grid;
+      align-content: center;
+      gap: 8px;
+      border-radius: inherit;
+      backface-visibility: hidden;
+    }
+
+    .flash-face.back {
+      transform: rotateY(180deg);
+      background: linear-gradient(180deg, #f8f8ff 0%, #eef2ff 100%);
+    }
+
     .section-title {
       font-size: 12px;
       color: var(--muted);
@@ -501,15 +554,14 @@
         <div>
           <h1>西班牙语单词背诵</h1>
           <p>
-            单文件版本，支持读取同目录下 4 个 JSON 单词库、按册数与单元筛选、闪卡模式、拼写模式、随机切换、发音，以及手机适配。
-            你上传的 txt 是一个 Quizlet 单词卡页面源码片段，我这里没有直接照搬，而是按同类学习页的交互思路重写成了纯前端可本地部署版本。
+            专注高频词汇记忆，支持按册数/单元筛选、闪卡与拼写练习、错词回顾、发音和移动端学习。
           </p>
         </div>
         <div class="pill-row">
-          <span class="pill">纯前端</span>
-          <span class="pill">支持 4 个 JSON</span>
-          <span class="pill">手机适配</span>
-          <span class="pill">支持发音</span>
+          <span class="pill">闪卡训练</span>
+          <span class="pill">拼写练习</span>
+          <span class="pill">错词复习</span>
+          <span class="pill">语音朗读</span>
         </div>
       </div>
     </section>
@@ -593,10 +645,21 @@
 
         <div class="progress"><span id="progressBar"></span></div>
 
-        <div class="prompt-wrap">
-          <div class="section-title">题面</div>
-          <div class="prompt" id="promptText">请先读取 JSON 单词库</div>
-          <div class="subtext" id="promptSubtext">支持西语→中文、中文→西语，以及拼写模式。</div>
+        <div class="flash-shell" id="flashShell">
+          <div class="flashcard" id="flashCard">
+            <div class="flash-inner">
+              <div class="flash-face front">
+                <div class="section-title">题面</div>
+                <div class="prompt" id="promptText">请先读取 JSON 单词库</div>
+                <div class="subtext" id="promptSubtext">支持西语→中文、中文→西语，以及拼写模式。</div>
+              </div>
+              <div class="flash-face back">
+                <div class="section-title">答案</div>
+                <div class="prompt" id="flashAnswer">点击翻面查看答案</div>
+                <div class="subtext">可用“我会了 / 再记一遍”快速推进</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -730,6 +793,9 @@
       cardIndexText: $('cardIndexText'),
       promptText: $('promptText'),
       promptSubtext: $('promptSubtext'),
+      flashShell: $('flashShell'),
+      flashCard: $('flashCard'),
+      flashAnswer: $('flashAnswer'),
       answerBox: $('answerBox'),
       spellBox: $('spellBox'),
       spellInput: $('spellInput'),
@@ -988,18 +1054,27 @@
       els.promptSubtext.textContent = pack.promptSubtext;
 
       if (state.currentMode === 'spell') {
+        els.flashShell.classList.add('hidden');
+        els.answerBox.parentElement.classList.remove('hidden');
         els.spellBox.classList.add('active');
         els.revealBtn.textContent = '显示答案';
       } else {
+        els.flashShell.classList.remove('hidden');
+        els.answerBox.parentElement.classList.add('hidden');
         els.spellBox.classList.remove('active');
-        els.revealBtn.textContent = state.answerVisible ? '隐藏答案' : '显示答案';
+        els.revealBtn.textContent = state.answerVisible ? '翻回题面' : '翻卡看答案';
       }
 
       if (!word) {
         els.answerBox.className = 'answer hidden';
         els.answerBox.textContent = '点击“显示答案”后查看';
+        els.flashAnswer.textContent = '点击翻面查看答案';
+        els.flashCard.classList.toggle('flipped', false);
         return;
       }
+
+      els.flashAnswer.textContent = pack.answer;
+      els.flashCard.classList.toggle('flipped', state.currentMode === 'flash' && state.answerVisible);
 
       if (state.answerVisible) {
         els.answerBox.className = 'answer';
@@ -1242,6 +1317,9 @@
         if (word) speakText(word.spanish || word.chinese);
       });
       els.revealBtn.addEventListener('click', () => revealAnswer());
+      els.flashCard.addEventListener('click', () => {
+        if (state.currentMode === 'flash') revealAnswer();
+      });
       els.prevBtn.addEventListener('click', () => moveCard(-1));
       els.nextBtn.addEventListener('click', () => moveCard(1));
       els.knowBtn.addEventListener('click', () => markKnown(true));
@@ -1277,6 +1355,12 @@
         if (event.key.toLowerCase() === 'p') {
           const word = getCurrentWord();
           if (word) speakText(word.spanish || word.chinese);
+        }
+        if (event.key === 'Enter' && state.currentMode === 'flash') {
+          revealAnswer();
+        }
+        if (event.key.toLowerCase() === 'f' && state.currentMode === 'flash') {
+          revealAnswer();
         }
       });
 
