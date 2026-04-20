@@ -336,18 +336,6 @@
       background: linear-gradient(180deg, #f8f8ff 0%, #eef2ff 100%);
     }
 
-    .flashcard.spell-mode::before {
-      content: "拼写题面";
-    }
-
-    .flashcard.spell-mode .flash-inner {
-      transform: none !important;
-    }
-
-    .flashcard.spell-mode .flash-face.back {
-      display: none;
-    }
-
     .section-title {
       font-size: 12px;
       color: var(--muted);
@@ -805,10 +793,6 @@
       answerVisible: false,
       activeFilterKey: '',
       progressByFilter: new Map(),
-      lyricSongs: [],
-      lyricSongIndex: 0,
-      lyricLineIndex: 0,
-      lyricReveal: false,
       stats: {
         seen: 0,
         correct: 0,
@@ -1178,14 +1162,12 @@
       els.promptSubtext.textContent = pack.promptSubtext;
 
       if (state.currentMode === 'spell') {
-        els.flashShell.classList.remove('hidden');
-        els.flashCard.classList.add('spell-mode');
+        els.flashShell.classList.add('hidden');
         els.answerBox.parentElement.classList.remove('hidden');
         els.spellBox.classList.add('active');
         els.revealBtn.textContent = '显示答案';
       } else {
         els.flashShell.classList.remove('hidden');
-        els.flashCard.classList.remove('spell-mode');
         els.answerBox.parentElement.classList.add('hidden');
         els.spellBox.classList.remove('active');
         els.revealBtn.textContent = state.answerVisible ? '翻回题面' : '翻卡看答案';
@@ -1255,109 +1237,8 @@
       renderCard();
       renderDetails();
       renderWrongList();
-      renderLyrics();
-      els.detailCard.classList.toggle('hidden', !state.showDetail || state.currentMode === 'flash');
+      els.detailCard.classList.toggle('hidden', state.currentMode === 'flash');
       persistProgressStore();
-    }
-
-    function pickLyricField(obj, keys, fallback = '') {
-      if (!obj || typeof obj !== 'object') return fallback;
-      for (const key of keys) {
-        const value = obj[key];
-        if (value !== undefined && value !== null && String(value).trim() !== '') return String(value).trim();
-      }
-      return fallback;
-    }
-
-    function normalizeLyricsData(json) {
-      const toLines = (lines) => (Array.isArray(lines) ? lines.map((line) => ({
-        es: pickLyricField(line, ['es', 'spanish', 'line', 'text', 'lyric']),
-        zh: pickLyricField(line, ['zh', 'chinese', 'translation', 'meaning', 'cn'])
-      })).filter((line) => line.es || line.zh) : []);
-
-      if (Array.isArray(json)) {
-        if (json[0] && Array.isArray(json[0].lines)) {
-          return json.map((song, idx) => ({
-            title: pickLyricField(song, ['title', 'name', 'song'], `歌曲 ${idx + 1}`),
-            lines: toLines(song.lines)
-          })).filter((song) => song.lines.length);
-        }
-        return [{ title: '导入歌曲', lines: toLines(json) }].filter((song) => song.lines.length);
-      }
-
-      if (json && typeof json === 'object' && Array.isArray(json.songs)) {
-        return json.songs.map((song, idx) => ({
-          title: pickLyricField(song, ['title', 'name', 'song'], `歌曲 ${idx + 1}`),
-          lines: toLines(song.lines || song.items || song.data)
-        })).filter((song) => song.lines.length);
-      }
-
-      return [];
-    }
-
-    function getCurrentLyricLine() {
-      const song = state.lyricSongs[state.lyricSongIndex];
-      if (!song || !song.lines.length) return null;
-      return song.lines[state.lyricLineIndex] || null;
-    }
-
-    function renderLyrics() {
-      if (!state.lyricSongs.length) {
-        els.lyricSongSelect.innerHTML = '<option value="">未导入</option>';
-        els.lyricLineEs.textContent = '导入后开始学习歌词';
-        els.lyricLineZh.textContent = '支持西语/中文双语行。';
-        return;
-      }
-
-      els.lyricSongSelect.innerHTML = state.lyricSongs.map((song, idx) => (
-        `<option value="${idx}">${escapeHtml(song.title)}（${song.lines.length}句）</option>`
-      )).join('');
-      els.lyricSongSelect.value = String(state.lyricSongIndex);
-
-      const line = getCurrentLyricLine();
-      if (!line) {
-        els.lyricLineEs.textContent = '当前歌曲暂无歌词行';
-        els.lyricLineZh.textContent = '';
-        return;
-      }
-      els.lyricLineEs.textContent = line.es || '（无西语行）';
-      els.lyricLineZh.textContent = state.lyricReveal ? (line.zh || '（无中文翻译）') : '点击“显示翻译”查看中文';
-      els.lyricRevealBtn.textContent = state.lyricReveal ? '隐藏翻译' : '显示翻译';
-    }
-
-    async function importLyricsFromFile(file) {
-      if (!file) return;
-      try {
-        const text = await file.text();
-        const json = JSON.parse(text);
-        const songs = normalizeLyricsData(json);
-        if (!songs.length) throw new Error('未识别到可用歌词，请检查 JSON 字段');
-        state.lyricSongs = songs;
-        state.lyricSongIndex = 0;
-        state.lyricLineIndex = 0;
-        state.lyricReveal = false;
-        renderLyrics();
-      } catch (error) {
-        alert(`歌词导入失败：${error.message}`);
-      }
-    }
-
-    function stepLyric(step) {
-      const song = state.lyricSongs[state.lyricSongIndex];
-      if (!song || !song.lines.length) return;
-      state.lyricLineIndex += step;
-      if (state.lyricLineIndex < 0) state.lyricLineIndex = 0;
-      if (state.lyricLineIndex >= song.lines.length) state.lyricLineIndex = song.lines.length - 1;
-      state.lyricReveal = false;
-      renderLyrics();
-    }
-
-    function randomLyric() {
-      const song = state.lyricSongs[state.lyricSongIndex];
-      if (!song || !song.lines.length) return;
-      state.lyricLineIndex = Math.floor(Math.random() * song.lines.length);
-      state.lyricReveal = false;
-      renderLyrics();
     }
 
     function resetSpellBox() {
