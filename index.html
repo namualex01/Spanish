@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>西班牙语单词背诵</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --card-2: #f8fafc;
+      --text: #162033;
+      --muted: #677489;
+      --primary: #4f46e5;
+      --primary-2: #6366f1;
+      --border: #e5e7eb;
+      --shadow: 0 14px 40px rgba(22, 32, 51, 0.08);
+      --radius: 22px;
+      --good: #059669;
+      --warn: #d97706;
+      --bad: #dc2626;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #f7f9fc 0%, #eef3ff 100%);
+      color: var(--text);
+      font-family: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      min-height: 100%;
+    }
+
+    button, select, input, textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease, background .15s ease;
+    }
+
+    button:active {
+      transform: translateY(1px) scale(0.995);
+    }
+
+    .app {
+      width: min(1120px, calc(100vw - 24px));
+      margin: 16px auto 40px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #312e81 0%, #4338ca 55%, #6366f1 100%);
+      color: #fff;
+      padding: 22px 20px;
+      border-radius: 28px;
+      box-shadow: 0 18px 48px rgba(67, 56, 202, .28);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 5vw, 40px);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0;
+      color: rgba(255,255,255,.9);
+      line-height: 1.65;
+      font-size: 14px;
+      max-width: 740px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      backdrop-filter: blur(6px);
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+      align-items: end;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+      grid-column: span 3;
+    }
+
+    .field.wide { grid-column: span 6; }
+    .field.full { grid-column: 1 / -1; }
+
+    .field label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .field select,
+    .field input[type="text"],
+    .field input[type="search"],
+    .field input[type="number"] {
+      width: 100%;
+      min-height: 46px;
+      padding: 0 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+
+    .field select:focus,
+    .field input:focus {
+      border-color: rgba(99,102,241,.65);
+      box-shadow: 0 0 0 4px rgba(99,102,241,.10);
+    }
+
+    .toggle-row,
+    .action-row,
+    .import-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      color: var(--text);
+      font-size: 14px;
+      user-select: none;
+    }
+
+    .toggle input { accent-color: var(--primary); }
+
+    .btn {
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 14px;
+      font-weight: 700;
+      background: var(--card-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn:hover { box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08); }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      border-color: transparent;
+    }
+    .btn.good {
+      background: rgba(5, 150, 105, 0.1);
+      color: var(--good);
+      border-color: rgba(5,150,105,.18);
+    }
+    .btn.warn {
+      background: rgba(217, 119, 6, 0.1);
+      color: var(--warn);
+      border-color: rgba(217,119,6,.18);
+    }
+
+    .status-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px;
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .stat .value {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.75fr) minmax(280px, .95fr);
+      gap: 16px;
+    }
+
+    .study-card {
+      position: relative;
+      border-radius: 28px;
+      padding: 22px;
+      min-height: 420px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+      border: 1px solid rgba(99,102,241,.12);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      display: grid;
+      grid-template-rows: auto auto 1fr auto auto;
+      gap: 14px;
+      overflow: hidden;
+    }
+
+    .study-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -70px -70px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(99,102,241,.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(99,102,241,.08);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .prompt-wrap,
+    .answer-wrap {
+      display: grid;
+      gap: 8px;
+      align-content: center;
+    }
+
+    .section-title {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 800;
+    }
+
+    .prompt {
+      font-size: clamp(26px, 6vw, 42px);
+      font-weight: 800;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .subtext {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      word-break: break-word;
+    }
+
+    .answer {
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(99,102,241,.06);
+      border: 1px dashed rgba(99,102,241,.25);
+      min-height: 88px;
+      display: grid;
+      align-content: center;
+      gap: 8px;
+    }
+
+    .answer.hidden {
+      place-items: center;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.025);
+      border-style: solid;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .progress {
+      height: 10px;
+      background: #edf2f7;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress > span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), #8b5cf6);
+      border-radius: inherit;
+      transition: width .25s ease;
+    }
+
+    .side {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+    .side-card {
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .side-card h3 {
+      margin: 0 0 12px;
+      font-size: 17px;
+    }
+
+    .list,
+    .tips {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mini-item {
+      border-radius: 16px;
+      padding: 12px;
+      background: #f8fafc;
+      border: 1px solid #edf2f7;
+    }
+
+    .mini-item strong,
+    .mini-item .es-word {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .mini-item .muted,
+    .mini-item .meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .spell-box {
+      display: none;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .spell-box.active {
+      display: grid;
+    }
+
+    .spell-input {
+      width: 100%;
+      min-height: 52px;
+      padding: 0 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .spell-input:focus {
+      border-color: rgba(99,102,241,.65);
+      box-shadow: 0 0 0 4px rgba(99,102,241,.10);
+    }
+
+    .feedback {
+      min-height: 24px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .feedback.good { color: var(--good); }
+    .feedback.bad { color: var(--bad); }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px 14px;
+      line-height: 1.8;
+    }
+
+    .code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 12px;
+      padding: 2px 8px;
+      font-size: 13px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .hidden { display: none !important; }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px 16px;
+      background: #fff;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .example-pre {
+      margin: 10px 0 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    @media (max-width: 920px) {
+      .field { grid-column: span 6; }
+      .field.wide { grid-column: span 12; }
+      .layout { grid-template-columns: 1fr; }
+      .status-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .app { width: min(100vw - 12px, 100%); margin-top: 6px; gap: 12px; }
+      .hero, .panel, .study-card, .side-card { border-radius: 20px; }
+      .hero { padding: 18px 16px; }
+      .panel, .side-card { padding: 14px; }
+      .study-card { padding: 16px; min-height: 360px; }
+      .field { grid-column: span 12; }
+      .card-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .status-bar { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .stat .value { font-size: 21px; }
+      .hero-top { flex-direction: column; }
+      .prompt { font-size: clamp(24px, 8vw, 34px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>西班牙语单词背诵</h1>
+          <p>
+            单文件版本，支持读取同目录下 4 个 JSON 单词库、按册数与单元筛选、闪卡模式、拼写模式、随机切换、发音，以及手机适配。
+            你上传的 txt 是一个 Quizlet 单词卡页面源码片段，我这里没有直接照搬，而是按同类学习页的交互思路重写成了纯前端可本地部署版本。
+          </p>
+        </div>
+        <div class="pill-row">
+          <span class="pill">纯前端</span>
+          <span class="pill">支持 4 个 JSON</span>
+          <span class="pill">手机适配</span>
+          <span class="pill">支持发音</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="controls">
+        <div class="field">
+          <label for="bookSelect">册数</label>
+          <select id="bookSelect"></select>
+        </div>
+        <div class="field">
+          <label for="unitSelect">单元</label>
+          <select id="unitSelect"></select>
+        </div>
+        <div class="field">
+          <label for="modeSelect">模式</label>
+          <select id="modeSelect">
+            <option value="flash">闪卡模式</option>
+            <option value="spell">拼写模式</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="directionSelect">方向</label>
+          <select id="directionSelect">
+            <option value="es-zh">西语 → 中文</option>
+            <option value="zh-es">中文 → 西语</option>
+          </select>
+        </div>
+        <div class="field wide">
+          <label for="searchInput">搜索（西语 / 中文 / 词性 / 备注）</label>
+          <input id="searchInput" type="search" placeholder="例如：ser / 是 / 动词" />
+        </div>
+        <div class="field full">
+          <div class="toggle-row">
+            <label class="toggle"><input id="shuffleToggle" type="checkbox" /> 随机顺序</label>
+            <label class="toggle"><input id="autoSpeakToggle" type="checkbox" /> 切卡自动朗读</label>
+            <label class="toggle"><input id="showNoteToggle" type="checkbox" checked /> 显示备注/例句</label>
+            <label class="toggle"><input id="onlyWrongToggle" type="checkbox" /> 仅复习答错词</label>
+          </div>
+        </div>
+        <div class="field full">
+          <div class="action-row">
+            <button class="btn" id="reloadBtn" type="button">重新读取 JSON</button>
+            <button class="btn" id="resetProgressBtn" type="button">清空本次记录</button>
+            <button class="btn" id="speakCurrentBtn" type="button">朗读当前单词</button>
+            <button class="btn primary" id="revealBtn" type="button">显示答案</button>
+          </div>
+        </div>
+        <div class="field full">
+          <div class="import-row">
+            <label class="toggle" for="fileImport1">导入/替换第一册 JSON</label>
+            <input class="hidden" id="fileImport1" type="file" accept="application/json,.json" />
+            <label class="toggle" for="fileImport2">导入/替换第二册 JSON</label>
+            <input class="hidden" id="fileImport2" type="file" accept="application/json,.json" />
+            <label class="toggle" for="fileImport3">导入/替换第三册 JSON</label>
+            <input class="hidden" id="fileImport3" type="file" accept="application/json,.json" />
+            <label class="toggle" for="fileImport4">导入/替换第四册 JSON</label>
+            <input class="hidden" id="fileImport4" type="file" accept="application/json,.json" />
+          </div>
+          <div class="note" id="loadNote" style="margin-top:10px;">
+            默认会尝试读取同目录下的 <span class="code">vocab1.json</span>、<span class="code">vocab2.json</span>、<span class="code">vocab3.json</span>、<span class="code">vocab4.json</span>。
+            如果你是双击本地文件打开，浏览器可能会拦截 <span class="code">fetch</span>，这时可以直接点击上面的“导入 JSON”。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="status-bar">
+      <div class="stat"><div class="label">当前词库</div><div class="value" id="statLibrary">-</div></div>
+      <div class="stat"><div class="label">当前单元词数</div><div class="value" id="statCount">0</div></div>
+      <div class="stat"><div class="label">学习进度</div><div class="value" id="statProgress">0 / 0</div></div>
+      <div class="stat"><div class="label">正确率</div><div class="value" id="statAccuracy">0%</div></div>
+    </section>
+
+    <section class="layout">
+      <div class="study-card">
+        <div class="card-meta">
+          <div class="tag" id="cardTag">未加载</div>
+          <div id="cardIndexText">第 0 / 0 个</div>
+        </div>
+
+        <div class="progress"><span id="progressBar"></span></div>
+
+        <div class="prompt-wrap">
+          <div class="section-title">题面</div>
+          <div class="prompt" id="promptText">请先读取 JSON 单词库</div>
+          <div class="subtext" id="promptSubtext">支持西语→中文、中文→西语，以及拼写模式。</div>
+        </div>
+
+        <div>
+          <div class="answer-wrap">
+            <div class="section-title">答案</div>
+            <div class="answer hidden" id="answerBox">点击“显示答案”后查看</div>
+          </div>
+
+          <div class="spell-box" id="spellBox">
+            <input id="spellInput" class="spell-input" type="text" placeholder="请输入拼写后点击“检查拼写”" autocomplete="off" />
+            <div class="action-row">
+              <button class="btn primary" id="checkSpellBtn" type="button">检查拼写</button>
+              <button class="btn" id="showSpellAnswerBtn" type="button">不会，显示答案</button>
+            </div>
+            <div class="feedback" id="spellFeedback"></div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn" id="prevBtn" type="button">上一词</button>
+          <button class="btn" id="nextBtn" type="button">下一词</button>
+          <button class="btn good" id="knowBtn" type="button">我会了</button>
+          <button class="btn warn" id="againBtn" type="button">再记一遍</button>
+          <button class="btn" id="randomBtn" type="button">随机抽词</button>
+        </div>
+      </div>
+
+      <div class="side">
+        <div class="side-card">
+          <h3>当前词条信息</h3>
+          <div class="list" id="detailList">
+            <div class="mini-item"><strong>尚未加载</strong><div class="muted">读取 JSON 后会显示词性、备注、例句等内容。</div></div>
+          </div>
+        </div>
+
+        <div class="side-card">
+          <h3>本轮错词本</h3>
+          <div class="list" id="wrongList">
+            <div class="mini-item"><strong>暂无错词</strong><div class="muted">在拼写模式或“再记一遍”时会自动加入。</div></div>
+          </div>
+        </div>
+
+        <div class="side-card">
+          <h3>使用说明</h3>
+          <div class="tips">
+            <div class="mini-item"><strong>1. 放文件</strong><div class="muted">把本页命名为 <span class="code">index.html</span>，和 4 个 JSON 放进同一个文件夹。</div></div>
+            <div class="mini-item"><strong>2. 默认文件名</strong><div class="muted"><span class="code">vocab1.json</span> 到 <span class="code">vocab4.json</span>；若你的名字不同，改下面 JS 配置即可。</div></div>
+            <div class="mini-item"><strong>3. JSON 格式</strong><div class="muted">支持数组、<span class="code">data/words/items/entries</span>、以及按 <span class="code">units</span> 嵌套的常见结构。</div></div>
+          </div>
+        </div>
+
+        <details>
+          <summary>可兼容的 JSON 示例</summary>
+          <div class="example-pre">[
+  {"unit": 1, "word": "hola", "meaning": "你好", "pos": "interj."},
+  {"unit": 1, "word": "adiós", "meaning": "再见"}
+]
+
+或
+
+{
+  "units": [
+    {
+      "unit": 1,
+      "words": [
+        {"spanish": "hola", "chinese": "你好"},
+        {"spanish": "gracias", "chinese": "谢谢"}
+      ]
+    }
+  ]
+}</div>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // 你只需要按实际文件名改这里。
+    const LIBRARIES = [
+      { id: '1', name: '第一册', file: 'vocab1.json' },
+      { id: '2', name: '第二册', file: 'vocab2.json' },
+      { id: '3', name: '第三册', file: 'vocab3.json' },
+      { id: '4', name: '第四册', file: 'vocab4.json' }
+    ];
+
+    const state = {
+      rawLibraries: {},
+      normalizedLibraries: {},
+      allWords: [],
+      filteredWords: [],
+      wrongWords: new Map(),
+      currentBook: 'all',
+      currentUnit: 'all',
+      currentMode: 'flash',
+      currentDirection: 'es-zh',
+      searchText: '',
+      shuffle: false,
+      autoSpeak: false,
+      showNote: true,
+      onlyWrong: false,
+      currentIndex: 0,
+      answerVisible: false,
+      stats: {
+        seen: 0,
+        correct: 0,
+        wrong: 0
+      }
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const els = {
+      bookSelect: $('bookSelect'),
+      unitSelect: $('unitSelect'),
+      modeSelect: $('modeSelect'),
+      directionSelect: $('directionSelect'),
+      searchInput: $('searchInput'),
+      shuffleToggle: $('shuffleToggle'),
+      autoSpeakToggle: $('autoSpeakToggle'),
+      showNoteToggle: $('showNoteToggle'),
+      onlyWrongToggle: $('onlyWrongToggle'),
+      reloadBtn: $('reloadBtn'),
+      resetProgressBtn: $('resetProgressBtn'),
+      speakCurrentBtn: $('speakCurrentBtn'),
+      revealBtn: $('revealBtn'),
+      loadNote: $('loadNote'),
+      statLibrary: $('statLibrary'),
+      statCount: $('statCount'),
+      statProgress: $('statProgress'),
+      statAccuracy: $('statAccuracy'),
+      cardTag: $('cardTag'),
+      cardIndexText: $('cardIndexText'),
+      promptText: $('promptText'),
+      promptSubtext: $('promptSubtext'),
+      answerBox: $('answerBox'),
+      spellBox: $('spellBox'),
+      spellInput: $('spellInput'),
+      checkSpellBtn: $('checkSpellBtn'),
+      showSpellAnswerBtn: $('showSpellAnswerBtn'),
+      spellFeedback: $('spellFeedback'),
+      prevBtn: $('prevBtn'),
+      nextBtn: $('nextBtn'),
+      knowBtn: $('knowBtn'),
+      againBtn: $('againBtn'),
+      randomBtn: $('randomBtn'),
+      detailList: $('detailList'),
+      wrongList: $('wrongList'),
+      progressBar: $('progressBar')
+    };
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function toArrayDeep(input) {
+      if (Array.isArray(input)) return input;
+      if (!input || typeof input !== 'object') return [];
+
+      const arrayKeys = ['data', 'words', 'items', 'entries', 'list', 'vocab', 'terms', 'cards'];
+      for (const key of arrayKeys) {
+        if (Array.isArray(input[key])) return input[key];
+      }
+
+      if (Array.isArray(input.units)) {
+        return input.units.flatMap((unitObj) => {
+          const unitNo = unitObj.unit ?? unitObj.lesson ?? unitObj.leccion ?? unitObj.name ?? unitObj.title ?? '';
+          const children = unitObj.words || unitObj.items || unitObj.entries || unitObj.data || unitObj.list || [];
+          if (!Array.isArray(children)) return [];
+          return children.map((item) => ({ ...item, unit: item.unit ?? unitNo }));
+        });
+      }
+
+      return [];
+    }
+
+    function pick(obj, keys, fallback = '') {
+      if (!obj || typeof obj !== 'object') return fallback;
+      for (const key of keys) {
+        if (obj[key] !== undefined && obj[key] !== null && obj[key] !== '') return obj[key];
+      }
+      return fallback;
+    }
+
+    function cleanUnitValue(value) {
+      if (value === undefined || value === null || value === '') return '未分单元';
+      const text = String(value).trim();
+      if (!text) return '未分单元';
+      return text.replace(/^unit\s*/i, '').replace(/^lesson\s*/i, '').replace(/^lecci[oó]n\s*/i, '').trim() || text;
+    }
+
+    function normalizeWord(item, bookId, fallbackUnit = '') {
+      const spanish = pick(item, ['spanish', 'es', 'word', 'term', 'vocab', 'front', 'question', 'headword', 'palabra']);
+      const chinese = pick(item, ['chinese', 'zh', 'meaning', 'definition', 'translation', 'back', 'answer', 'gloss']);
+
+      if (!spanish && !chinese) return null;
+
+      const unit = cleanUnitValue(pick(item, ['unit', 'lesson', 'leccion', 'chapter', 'section'], fallbackUnit || ''));
+      const pos = pick(item, ['pos', 'partOfSpeech', 'wordClass', '词性']);
+      const note = pick(item, ['note', 'notes', 'remark', 'memo', 'tip', '备注']);
+      const ipa = pick(item, ['ipa', 'phonetic', 'pronunciation', '音标']);
+      const example = pick(item, ['example', 'sentence', 'exampleEs', '例句']);
+      const exampleZh = pick(item, ['exampleZh', 'sentenceZh', 'exampleCn', '例句翻译']);
+      const audio = pick(item, ['audio', 'audioUrl', 'tts']);
+
+      return {
+        id: `${bookId}-${unit}-${spanish || chinese}-${Math.random().toString(36).slice(2, 8)}`,
+        bookId: String(bookId),
+        unit,
+        spanish: String(spanish || '').trim(),
+        chinese: String(chinese || '').trim(),
+        pos: String(pos || '').trim(),
+        note: String(note || '').trim(),
+        ipa: String(ipa || '').trim(),
+        example: String(example || '').trim(),
+        exampleZh: String(exampleZh || '').trim(),
+        audio: String(audio || '').trim()
+      };
+    }
+
+    function normalizeLibraryData(bookId, data) {
+      if (!data) return [];
+      const baseList = toArrayDeep(data);
+      return baseList
+        .map((item) => normalizeWord(item, bookId, item && item.unit))
+        .filter(Boolean);
+    }
+
+    async function loadLibrary(lib) {
+      try {
+        const response = await fetch(lib.file, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`${lib.file} 读取失败：${response.status}`);
+        const json = await response.json();
+        state.rawLibraries[lib.id] = json;
+        state.normalizedLibraries[lib.id] = normalizeLibraryData(lib.id, json);
+        return { ok: true, file: lib.file, count: state.normalizedLibraries[lib.id].length };
+      } catch (error) {
+        state.rawLibraries[lib.id] = null;
+        state.normalizedLibraries[lib.id] = [];
+        return { ok: false, file: lib.file, message: error.message };
+      }
+    }
+
+    async function loadAllLibraries() {
+      const results = await Promise.all(LIBRARIES.map(loadLibrary));
+      state.allWords = LIBRARIES.flatMap((lib) => state.normalizedLibraries[lib.id] || []);
+      updateLoadNote(results);
+      rebuildBookOptions();
+      applyFilters(true);
+    }
+
+    function updateLoadNote(results) {
+      const ok = results.filter((x) => x.ok);
+      const fail = results.filter((x) => !x.ok);
+      const okText = ok.length
+        ? `已自动读取：${ok.map((x) => `${x.file}（${x.count}词）`).join('、')}`
+        : '暂未自动读取到 JSON。';
+      const failText = fail.length
+        ? `未自动读取：${fail.map((x) => x.file).join('、')}。如果你是本地双击打开页面，这通常是浏览器限制，直接点击上面的“导入 JSON”即可。`
+        : '4 个词库均可自动读取。';
+      els.loadNote.innerHTML = `${escapeHtml(okText)}<br>${escapeHtml(failText)}`;
+    }
+
+    function rebuildBookOptions() {
+      const counts = new Map();
+      LIBRARIES.forEach((lib) => counts.set(lib.id, (state.normalizedLibraries[lib.id] || []).length));
+      els.bookSelect.innerHTML = [
+        `<option value="all">全部册数</option>`,
+        ...LIBRARIES.map((lib) => `<option value="${lib.id}">${escapeHtml(lib.name)}（${counts.get(lib.id) || 0}）</option>`)
+      ].join('');
+      els.bookSelect.value = state.currentBook;
+      rebuildUnitOptions();
+    }
+
+    function rebuildUnitOptions() {
+      const scoped = state.currentBook === 'all'
+        ? state.allWords
+        : state.allWords.filter((item) => item.bookId === state.currentBook);
+      const units = [...new Set(scoped.map((item) => item.unit))];
+      const sorted = units.sort((a, b) => {
+        const na = Number(a), nb = Number(b);
+        if (!Number.isNaN(na) && !Number.isNaN(nb)) return na - nb;
+        return String(a).localeCompare(String(b), 'zh-CN');
+      });
+      els.unitSelect.innerHTML = [`<option value="all">全部单元</option>`, ...sorted.map((u) => `<option value="${escapeHtml(u)}">${escapeHtml(u)}</option>`)].join('');
+      if (!sorted.includes(state.currentUnit)) state.currentUnit = 'all';
+      els.unitSelect.value = state.currentUnit;
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function applyFilters(resetIndex = false) {
+      let list = [...state.allWords];
+      if (state.currentBook !== 'all') list = list.filter((item) => item.bookId === state.currentBook);
+      if (state.currentUnit !== 'all') list = list.filter((item) => item.unit === state.currentUnit);
+
+      const keyword = state.searchText.trim().toLowerCase();
+      if (keyword) {
+        list = list.filter((item) => {
+          const text = [item.spanish, item.chinese, item.pos, item.note, item.example, item.exampleZh].join(' ').toLowerCase();
+          return text.includes(keyword);
+        });
+      }
+
+      if (state.onlyWrong) {
+        const wrongIds = new Set([...state.wrongWords.keys()]);
+        list = list.filter((item) => wrongIds.has(item.id));
+      }
+
+      if (state.shuffle) list = shuffleArray(list);
+      state.filteredWords = list;
+
+      if (resetIndex) state.currentIndex = 0;
+      if (state.currentIndex >= state.filteredWords.length) state.currentIndex = Math.max(0, state.filteredWords.length - 1);
+      state.answerVisible = false;
+      resetSpellBox();
+      renderAll();
+    }
+
+    function getCurrentWord() {
+      return state.filteredWords[state.currentIndex] || null;
+    }
+
+    function getBookName(bookId) {
+      const item = LIBRARIES.find((lib) => lib.id === String(bookId));
+      return item ? item.name : `第${bookId}册`;
+    }
+
+    function renderStats() {
+      const currentBookLabel = state.currentBook === 'all'
+        ? '全部册数'
+        : getBookName(state.currentBook);
+      const total = state.filteredWords.length;
+      const seen = Math.min(state.stats.seen, total || state.stats.seen);
+      const denom = state.stats.correct + state.stats.wrong;
+      const accuracy = denom ? Math.round((state.stats.correct / denom) * 100) : 0;
+
+      els.statLibrary.textContent = currentBookLabel;
+      els.statCount.textContent = String(total);
+      els.statProgress.textContent = `${total ? state.currentIndex + 1 : 0} / ${total}`;
+      els.statAccuracy.textContent = `${accuracy}%`;
+
+      const progress = total ? ((state.currentIndex + 1) / total) * 100 : 0;
+      els.progressBar.style.width = `${progress}%`;
+    }
+
+    function buildPromptAnswer(word) {
+      if (!word) {
+        return {
+          tag: '未加载',
+          prompt: '请先读取 JSON 单词库',
+          promptSubtext: '把 index.html 与四个 JSON 放在同一文件夹，或手动导入 JSON。',
+          answer: '点击“显示答案”后查看'
+        };
+      }
+
+      const isEsToZh = state.currentDirection === 'es-zh';
+      const prompt = isEsToZh ? (word.spanish || '（无西语字段）') : (word.chinese || '（无中文字段）');
+      const answer = isEsToZh ? (word.chinese || '（无中文字段）') : (word.spanish || '（无西语字段）');
+      const subParts = [];
+      if (word.ipa) subParts.push(`音标：${word.ipa}`);
+      if (word.pos) subParts.push(`词性：${word.pos}`);
+      if (word.unit) subParts.push(`单元：${word.unit}`);
+
+      return {
+        tag: `${getBookName(word.bookId)} · Unit ${word.unit}`,
+        prompt,
+        promptSubtext: subParts.join('  ·  ') || '可点击“朗读当前单词”播放西语发音。',
+        answer
+      };
+    }
+
+    function renderCard() {
+      const word = getCurrentWord();
+      const pack = buildPromptAnswer(word);
+      els.cardTag.textContent = pack.tag;
+      els.cardIndexText.textContent = `第 ${state.filteredWords.length ? state.currentIndex + 1 : 0} / ${state.filteredWords.length} 个`;
+      els.promptText.textContent = pack.prompt;
+      els.promptSubtext.textContent = pack.promptSubtext;
+
+      if (state.currentMode === 'spell') {
+        els.spellBox.classList.add('active');
+        els.revealBtn.textContent = '显示答案';
+      } else {
+        els.spellBox.classList.remove('active');
+        els.revealBtn.textContent = state.answerVisible ? '隐藏答案' : '显示答案';
+      }
+
+      if (!word) {
+        els.answerBox.className = 'answer hidden';
+        els.answerBox.textContent = '点击“显示答案”后查看';
+        return;
+      }
+
+      if (state.answerVisible) {
+        els.answerBox.className = 'answer';
+        els.answerBox.innerHTML = escapeHtml(pack.answer);
+      } else {
+        els.answerBox.className = 'answer hidden';
+        els.answerBox.textContent = '点击“显示答案”后查看';
+      }
+    }
+
+    function renderDetails() {
+      const word = getCurrentWord();
+      if (!word) {
+        els.detailList.innerHTML = `<div class="mini-item"><strong>暂无内容</strong><div class="muted">请先读取 JSON。</div></div>`;
+        return;
+      }
+
+      const chunks = [];
+      chunks.push(`<div class="mini-item"><span class="es-word">${escapeHtml(word.spanish || '（无西语）')}</span><div class="muted">${escapeHtml(word.chinese || '（无中文）')}</div></div>`);
+      chunks.push(`<div class="mini-item"><strong>基础信息</strong><div class="meta">册数：${escapeHtml(getBookName(word.bookId))}<br>单元：${escapeHtml(word.unit || '未分单元')}<br>词性：${escapeHtml(word.pos || '未标注')}<br>音标：${escapeHtml(word.ipa || '未标注')}</div></div>`);
+
+      if (state.showNote) {
+        if (word.note) {
+          chunks.push(`<div class="mini-item"><strong>备注</strong><div class="meta">${escapeHtml(word.note)}</div></div>`);
+        }
+        if (word.example || word.exampleZh) {
+          chunks.push(`<div class="mini-item"><strong>例句</strong><div class="meta">${escapeHtml(word.example || '')}${word.example && word.exampleZh ? '<br>' : ''}${escapeHtml(word.exampleZh || '')}</div></div>`);
+        }
+      }
+
+      els.detailList.innerHTML = chunks.join('');
+    }
+
+    function renderWrongList() {
+      const items = [...state.wrongWords.values()].slice(-8).reverse();
+      if (!items.length) {
+        els.wrongList.innerHTML = `<div class="mini-item"><strong>暂无错词</strong><div class="muted">答错的单词会显示在这里。</div></div>`;
+        return;
+      }
+      els.wrongList.innerHTML = items.map((word) => `
+        <div class="mini-item">
+          <strong>${escapeHtml(word.spanish || '（无西语）')}</strong>
+          <div class="muted">${escapeHtml(word.chinese || '（无中文）')}</div>
+          <div class="meta">${escapeHtml(getBookName(word.bookId))} · Unit ${escapeHtml(word.unit || '-')}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderAll() {
+      rebuildUnitOptions();
+      renderStats();
+      renderCard();
+      renderDetails();
+      renderWrongList();
+    }
+
+    function resetSpellBox() {
+      els.spellInput.value = '';
+      els.spellFeedback.textContent = '';
+      els.spellFeedback.className = 'feedback';
+    }
+
+    function revealAnswer(force = null) {
+      state.answerVisible = force === null ? !state.answerVisible : Boolean(force);
+      renderCard();
+    }
+
+    function speakText(text) {
+      const content = String(text || '').trim();
+      if (!content) return;
+      if (!('speechSynthesis' in window)) {
+        alert('当前浏览器不支持语音朗读。');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(content);
+      utterance.lang = 'es-ES';
+      utterance.rate = 0.95;
+      const voices = speechSynthesis.getVoices?.() || [];
+      const matched = voices.find((voice) => /^es(-|_)/i.test(voice.lang));
+      if (matched) utterance.voice = matched;
+      speechSynthesis.speak(utterance);
+    }
+
+    function maybeAutoSpeak() {
+      const word = getCurrentWord();
+      if (!word || !state.autoSpeak) return;
+      const target = word.spanish || word.chinese;
+      speakText(target);
+    }
+
+    function moveCard(step) {
+      if (!state.filteredWords.length) return;
+      state.currentIndex += step;
+      if (state.currentIndex < 0) state.currentIndex = 0;
+      if (state.currentIndex >= state.filteredWords.length) state.currentIndex = state.filteredWords.length - 1;
+      state.answerVisible = false;
+      resetSpellBox();
+      renderAll();
+      maybeAutoSpeak();
+    }
+
+    function jumpRandom() {
+      if (!state.filteredWords.length) return;
+      const next = Math.floor(Math.random() * state.filteredWords.length);
+      state.currentIndex = next;
+      state.answerVisible = false;
+      resetSpellBox();
+      renderAll();
+      maybeAutoSpeak();
+    }
+
+    function markKnown(isCorrect) {
+      const word = getCurrentWord();
+      if (!word) return;
+      state.stats.seen += 1;
+      if (isCorrect) {
+        state.stats.correct += 1;
+        state.wrongWords.delete(word.id);
+      } else {
+        state.stats.wrong += 1;
+        state.wrongWords.set(word.id, word);
+      }
+      renderWrongList();
+      moveCard(1);
+    }
+
+    function normalizeSpell(value) {
+      return String(value || '')
+        .trim()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[¡!¿?.,;:()"']/g, '')
+        .replace(/\s+/g, ' ');
+    }
+
+    function checkSpelling() {
+      const word = getCurrentWord();
+      if (!word) return;
+      const userValue = normalizeSpell(els.spellInput.value);
+      const correctAnswer = normalizeSpell(state.currentDirection === 'es-zh' ? word.chinese : word.spanish);
+      if (!userValue) {
+        els.spellFeedback.textContent = '请先输入答案。';
+        els.spellFeedback.className = 'feedback bad';
+        return;
+      }
+      if (userValue === correctAnswer) {
+        els.spellFeedback.textContent = '回答正确，已为你切到下一个。';
+        els.spellFeedback.className = 'feedback good';
+        revealAnswer(true);
+        setTimeout(() => markKnown(true), 350);
+      } else {
+        els.spellFeedback.textContent = '不对，再试一次，或直接显示答案。';
+        els.spellFeedback.className = 'feedback bad';
+        state.wrongWords.set(word.id, word);
+        renderWrongList();
+      }
+    }
+
+    async function importLibraryFromFile(bookId, file) {
+      if (!file) return;
+      try {
+        const text = await file.text();
+        const json = JSON.parse(text);
+        state.rawLibraries[bookId] = json;
+        state.normalizedLibraries[bookId] = normalizeLibraryData(bookId, json);
+        state.allWords = LIBRARIES.flatMap((lib) => state.normalizedLibraries[lib.id] || []);
+        rebuildBookOptions();
+        applyFilters(true);
+        els.loadNote.innerHTML = `已手动导入：${escapeHtml(file.name)} → ${escapeHtml(getBookName(bookId))}（${state.normalizedLibraries[bookId].length} 词）`;
+      } catch (error) {
+        alert(`导入失败：${error.message}`);
+      }
+    }
+
+    function resetProgress() {
+      state.currentIndex = 0;
+      state.answerVisible = false;
+      state.wrongWords.clear();
+      state.stats = { seen: 0, correct: 0, wrong: 0 };
+      resetSpellBox();
+      renderAll();
+    }
+
+    function bindEvents() {
+      els.bookSelect.addEventListener('change', () => {
+        state.currentBook = els.bookSelect.value;
+        state.currentUnit = 'all';
+        applyFilters(true);
+      });
+
+      els.unitSelect.addEventListener('change', () => {
+        state.currentUnit = els.unitSelect.value;
+        applyFilters(true);
+      });
+
+      els.modeSelect.addEventListener('change', () => {
+        state.currentMode = els.modeSelect.value;
+        state.answerVisible = false;
+        resetSpellBox();
+        renderAll();
+      });
+
+      els.directionSelect.addEventListener('change', () => {
+        state.currentDirection = els.directionSelect.value;
+        state.answerVisible = false;
+        resetSpellBox();
+        renderAll();
+      });
+
+      els.searchInput.addEventListener('input', () => {
+        state.searchText = els.searchInput.value;
+        applyFilters(true);
+      });
+
+      els.shuffleToggle.addEventListener('change', () => {
+        state.shuffle = els.shuffleToggle.checked;
+        applyFilters(true);
+      });
+
+      els.autoSpeakToggle.addEventListener('change', () => {
+        state.autoSpeak = els.autoSpeakToggle.checked;
+      });
+
+      els.showNoteToggle.addEventListener('change', () => {
+        state.showNote = els.showNoteToggle.checked;
+        renderDetails();
+      });
+
+      els.onlyWrongToggle.addEventListener('change', () => {
+        state.onlyWrong = els.onlyWrongToggle.checked;
+        applyFilters(true);
+      });
+
+      els.reloadBtn.addEventListener('click', loadAllLibraries);
+      els.resetProgressBtn.addEventListener('click', resetProgress);
+      els.speakCurrentBtn.addEventListener('click', () => {
+        const word = getCurrentWord();
+        if (word) speakText(word.spanish || word.chinese);
+      });
+      els.revealBtn.addEventListener('click', () => revealAnswer());
+      els.prevBtn.addEventListener('click', () => moveCard(-1));
+      els.nextBtn.addEventListener('click', () => moveCard(1));
+      els.knowBtn.addEventListener('click', () => markKnown(true));
+      els.againBtn.addEventListener('click', () => markKnown(false));
+      els.randomBtn.addEventListener('click', jumpRandom);
+      els.checkSpellBtn.addEventListener('click', checkSpelling);
+      els.showSpellAnswerBtn.addEventListener('click', () => {
+        revealAnswer(true);
+        const word = getCurrentWord();
+        if (word) state.wrongWords.set(word.id, word);
+        renderWrongList();
+      });
+      els.spellInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') checkSpelling();
+      });
+
+      ['1','2','3','4'].forEach((id) => {
+        const input = document.getElementById(`fileImport${id}`);
+        input.addEventListener('change', (event) => importLibraryFromFile(id, event.target.files[0]));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        const activeTag = document.activeElement?.tagName?.toLowerCase();
+        const typing = activeTag === 'input' || activeTag === 'textarea' || document.activeElement?.isContentEditable;
+        if (typing && event.key !== 'Escape') return;
+
+        if (event.key === 'ArrowRight') moveCard(1);
+        if (event.key === 'ArrowLeft') moveCard(-1);
+        if (event.key === ' ') {
+          event.preventDefault();
+          revealAnswer();
+        }
+        if (event.key.toLowerCase() === 'p') {
+          const word = getCurrentWord();
+          if (word) speakText(word.spanish || word.chinese);
+        }
+      });
+
+      if (window.speechSynthesis) window.speechSynthesis.onvoiceschanged = () => {};
+    }
+
+    function init() {
+      bindEvents();
+      rebuildBookOptions();
+      renderAll();
+      loadAllLibraries();
+    }
+
+    init();
+  </script>
+</body>
+</html>

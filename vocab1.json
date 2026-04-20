@@ -1,0 +1,5615 @@
+[
+  {
+    "unit": 1,
+    "word": "quién",
+    "meaning": "谁",
+    "pos": "pron."
+  },
+  {
+    "unit": 1,
+    "word": "ser",
+    "meaning": "是",
+    "pos": "intr."
+  },
+  {
+    "unit": 1,
+    "word": "es",
+    "meaning": "（他，她，它）是"
+  },
+  {
+    "unit": 1,
+    "word": "son",
+    "meaning": "（他们，她们）是"
+  },
+  {
+    "unit": 1,
+    "word": "él",
+    "meaning": "他",
+    "pos": "pron."
+  },
+  {
+    "unit": 1,
+    "word": "Paco",
+    "meaning": "巴科（男人名）",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 1,
+    "word": "cubano,na",
+    "meaning": "古巴人"
+  },
+  {
+    "unit": 1,
+    "word": "Pepe",
+    "meaning": "贝贝（男人名）"
+  },
+  {
+    "unit": 1,
+    "word": "chileno,na",
+    "meaning": "智利人",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 1,
+    "word": "ella",
+    "meaning": "她",
+    "pos": "pron."
+  },
+  {
+    "unit": 1,
+    "word": "llamarse",
+    "meaning": "叫……名字",
+    "pos": "prnl."
+  },
+  {
+    "unit": 1,
+    "word": "se llama",
+    "meaning": "（他，她，您）叫……名字"
+  },
+  {
+    "unit": 1,
+    "word": "Ana",
+    "meaning": "安娜（女人名）"
+  },
+  {
+    "unit": 1,
+    "word": "panameño,ña",
+    "meaning": "巴拿马人",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 1,
+    "word": "chino,na",
+    "meaning": "中国人",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 1,
+    "word": "y",
+    "meaning": "和",
+    "pos": "conj."
+  },
+  {
+    "unit": 1,
+    "word": "amigo,ga",
+    "meaning": "朋友",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 1,
+    "word": "sí",
+    "meaning": "是",
+    "pos": "adv."
+  },
+  {
+    "unit": 1,
+    "word": "no",
+    "meaning": "不",
+    "pos": "adv."
+  },
+  {
+    "unit": 1,
+    "word": "ellos,ellas",
+    "meaning": "他们，她们",
+    "pos": "pron."
+  },
+  {
+    "unit": 1,
+    "word": "uno,na",
+    "meaning": "一",
+    "pos": "num."
+  },
+  {
+    "unit": 1,
+    "word": "dos",
+    "meaning": "二",
+    "pos": "num."
+  },
+  {
+    "unit": 1,
+    "word": "tres",
+    "meaning": "三",
+    "pos": "num."
+  },
+  {
+    "unit": 1,
+    "word": "cuatro",
+    "meaning": "四",
+    "pos": "num."
+  },
+  {
+    "unit": 2,
+    "word": "qué",
+    "meaning": "什么",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "éste,ta",
+    "meaning": "这个，这位",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "estudiante",
+    "meaning": "学生",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 2,
+    "word": "cocinero,ra",
+    "meaning": "厨师",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 2,
+    "word": "hermano,na",
+    "meaning": "兄弟，姐妹",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 2,
+    "word": "de",
+    "meaning": "（表示所属）",
+    "pos": "prep."
+  },
+  {
+    "unit": 2,
+    "word": "Lucía",
+    "meaning": "露西亚（女人名）"
+  },
+  {
+    "unit": 2,
+    "word": "cantante",
+    "meaning": "歌手，歌唱家",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 2,
+    "word": "esposo,sa",
+    "meaning": "丈夫，妻子",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 2,
+    "word": "éstos,tas",
+    "meaning": "这些，这几位",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "Manolo",
+    "meaning": "马诺罗（男人名）"
+  },
+  {
+    "unit": 2,
+    "word": "Ema",
+    "meaning": "埃玛（女人名）"
+  },
+  {
+    "unit": 2,
+    "word": "médico,ca",
+    "meaning": "医生",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 2,
+    "word": "padre",
+    "meaning": "父亲",
+    "pos": "m."
+  },
+  {
+    "unit": 2,
+    "word": "enfermero,ra",
+    "meaning": "护士",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 2,
+    "word": "madre",
+    "meaning": "母亲",
+    "pos": "f."
+  },
+  {
+    "unit": 2,
+    "word": "yo",
+    "meaning": "我",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "me llamo",
+    "meaning": "我叫"
+  },
+  {
+    "unit": 2,
+    "word": "quiénes",
+    "meaning": "谁们",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "su",
+    "meaning": "他的，他们的",
+    "pos": "adj."
+  },
+  {
+    "unit": 2,
+    "word": "tú",
+    "meaning": "你",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "nosotros,tras",
+    "meaning": "我们",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "vosotros,tras",
+    "meaning": "你们",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "usted",
+    "meaning": "您",
+    "pos": "pron."
+  },
+  {
+    "unit": 2,
+    "word": "ustedes",
+    "meaning": "诸位",
+    "pos": "pron."
+  },
+  {
+    "unit": 3,
+    "word": "dónde",
+    "meaning": "哪里",
+    "pos": "adv."
+  },
+  {
+    "unit": 3,
+    "word": "haber",
+    "meaning": "有",
+    "pos": "intr."
+  },
+  {
+    "unit": 3,
+    "word": "mi",
+    "meaning": "我的",
+    "pos": "adj."
+  },
+  {
+    "unit": 3,
+    "word": "en",
+    "meaning": "在……里面",
+    "pos": "prep."
+  },
+  {
+    "unit": 3,
+    "word": "un",
+    "meaning": "阳性单数不定冠词",
+    "pos": "art."
+  },
+  {
+    "unit": 3,
+    "word": "sala",
+    "meaning": "厅",
+    "pos": "f."
+  },
+  {
+    "unit": 3,
+    "word": "cocina",
+    "meaning": "厨房",
+    "pos": "f."
+  },
+  {
+    "unit": 3,
+    "word": "dormitorio",
+    "meaning": "卧室",
+    "pos": "m."
+  },
+  {
+    "unit": 3,
+    "word": "mesa",
+    "meaning": "桌子",
+    "pos": "f."
+  },
+  {
+    "unit": 3,
+    "word": "sofá",
+    "meaning": "沙发",
+    "pos": "m."
+  },
+  {
+    "unit": 3,
+    "word": "cama",
+    "meaning": "床",
+    "pos": "f."
+  },
+  {
+    "unit": 3,
+    "word": "hijo,a",
+    "meaning": "儿子，女儿",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 3,
+    "word": "estar",
+    "meaning": "在；位于……",
+    "pos": "intr."
+  },
+  {
+    "unit": 3,
+    "word": "aquél,lla",
+    "meaning": "那个",
+    "pos": "pron."
+  },
+  {
+    "unit": 3,
+    "word": "funcionario,ria",
+    "meaning": "公务员",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 3,
+    "word": "el",
+    "meaning": "阳性单数定冠词",
+    "pos": "art."
+  },
+  {
+    "unit": 3,
+    "word": "oficina",
+    "meaning": "办公室",
+    "pos": "f."
+  },
+  {
+    "unit": 3,
+    "word": "centro",
+    "meaning": "中心",
+    "pos": "m."
+  },
+  {
+    "unit": 3,
+    "word": "ciudad",
+    "meaning": "城市",
+    "pos": "f."
+  },
+  {
+    "unit": 3,
+    "word": "cerca de",
+    "meaning": "在……附近"
+  },
+  {
+    "unit": 3,
+    "word": "mecánico,ca",
+    "meaning": "机械师",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 3,
+    "word": "vuestro",
+    "meaning": "你们的",
+    "pos": "adj."
+  },
+  {
+    "unit": 3,
+    "word": "nuestro",
+    "meaning": "我们的",
+    "pos": "adj."
+  },
+  {
+    "unit": 3,
+    "word": "fábrica",
+    "meaning": "工厂",
+    "pos": "f."
+  },
+  {
+    "unit": 3,
+    "word": "la",
+    "meaning": "阴性单数定冠词",
+    "pos": "art."
+  },
+  {
+    "unit": 3,
+    "word": "las",
+    "meaning": "阴性复数定冠词",
+    "pos": "art."
+  },
+  {
+    "unit": 3,
+    "word": "afueras",
+    "meaning": "郊外",
+    "pos": "f. Pl."
+  },
+  {
+    "unit": 3,
+    "word": "mucho",
+    "meaning": "很多",
+    "pos": "adj."
+  },
+  {
+    "unit": 3,
+    "word": "empleado,da",
+    "meaning": "职工",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 3,
+    "word": "cinco",
+    "meaning": "五",
+    "pos": "num."
+  },
+  {
+    "unit": 3,
+    "word": "seis",
+    "meaning": "六",
+    "pos": "num."
+  },
+  {
+    "unit": 3,
+    "word": "siete",
+    "meaning": "七",
+    "pos": "num."
+  },
+  {
+    "unit": 3,
+    "word": "ocho",
+    "meaning": "八",
+    "pos": "num."
+  },
+  {
+    "unit": 4,
+    "word": "cómo",
+    "meaning": "怎么样，什么样",
+    "pos": "adv."
+  },
+  {
+    "unit": 4,
+    "word": "familia",
+    "meaning": "家，家庭",
+    "pos": "f."
+  },
+  {
+    "unit": 4,
+    "word": "señor,ra",
+    "meaning": "先生，女士",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 4,
+    "word": "veinte",
+    "meaning": "二十",
+    "pos": "num."
+  },
+  {
+    "unit": 4,
+    "word": "hombre",
+    "meaning": "男人",
+    "pos": "m."
+  },
+  {
+    "unit": 4,
+    "word": "maestro,tra",
+    "meaning": "教师",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 4,
+    "word": "joven",
+    "meaning": "年轻的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "simpático",
+    "meaning": "和蔼可亲的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "escuela",
+    "meaning": "学校",
+    "pos": "f."
+  },
+  {
+    "unit": 4,
+    "word": "grande",
+    "meaning": "大的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "una",
+    "meaning": "阴性单数不定冠词",
+    "pos": "art."
+  },
+  {
+    "unit": 4,
+    "word": "amable",
+    "meaning": "和蔼的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "puqueño",
+    "meaning": "小的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "bonito",
+    "meaning": "漂亮的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "ahora",
+    "meaning": "现在",
+    "pos": "adv."
+  },
+  {
+    "unit": 4,
+    "word": "veintiuno",
+    "meaning": "二十一",
+    "pos": "num."
+  },
+  {
+    "unit": 4,
+    "word": "habitación",
+    "meaning": "房间",
+    "pos": "f."
+  },
+  {
+    "unit": 4,
+    "word": "silla",
+    "meaning": "椅子",
+    "pos": "f."
+  },
+  {
+    "unit": 4,
+    "word": "estante",
+    "meaning": "书柜",
+    "pos": "m."
+  },
+  {
+    "unit": 4,
+    "word": "libro",
+    "meaning": "书",
+    "pos": "m."
+  },
+  {
+    "unit": 4,
+    "word": "nuevo",
+    "meaning": "新的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "interesante",
+    "meaning": "有趣的",
+    "pos": "adj."
+  },
+  {
+    "unit": 4,
+    "word": "pluma",
+    "meaning": "钢笔",
+    "pos": "f."
+  },
+  {
+    "unit": 4,
+    "word": "lápiz",
+    "meaning": "铅笔",
+    "pos": "m."
+  },
+  {
+    "unit": 4,
+    "word": "periódico",
+    "meaning": "报纸",
+    "pos": "m."
+  },
+  {
+    "unit": 4,
+    "word": "revista",
+    "meaning": "杂志",
+    "pos": "f."
+  },
+  {
+    "unit": 4,
+    "word": "nada",
+    "meaning": "什么都没有",
+    "pos": "adv."
+  },
+  {
+    "unit": 4,
+    "word": "veintidós",
+    "meaning": "二十二",
+    "pos": "num."
+  },
+  {
+    "unit": 4,
+    "word": "mal",
+    "meaning": "不好，不舒服",
+    "pos": "adv."
+  },
+  {
+    "unit": 4,
+    "word": "nueve",
+    "meaning": "九",
+    "pos": "num."
+  },
+  {
+    "unit": 4,
+    "word": "diez",
+    "meaning": "十",
+    "pos": "num."
+  },
+  {
+    "unit": 4,
+    "word": "once",
+    "meaning": "十一",
+    "pos": "num."
+  },
+  {
+    "unit": 4,
+    "word": "doce",
+    "meaning": "十二",
+    "pos": "num."
+  },
+  {
+    "unit": 5,
+    "word": "esto",
+    "meaning": "这，这个",
+    "pos": "pron."
+  },
+  {
+    "unit": 5,
+    "word": "armario",
+    "meaning": "衣柜",
+    "pos": "m."
+  },
+  {
+    "unit": 5,
+    "word": "dentro",
+    "meaning": "里面",
+    "pos": "adv."
+  },
+  {
+    "unit": 5,
+    "word": "ropa",
+    "meaning": "衣服",
+    "pos": "f."
+  },
+  {
+    "unit": 5,
+    "word": "chaqueta",
+    "meaning": "外衣",
+    "pos": "f."
+  },
+  {
+    "unit": 5,
+    "word": "treinta",
+    "meaning": "三十",
+    "pos": "num."
+  },
+  {
+    "unit": 5,
+    "word": "pantalón",
+    "meaning": "裤子",
+    "pos": "m."
+  },
+  {
+    "unit": 5,
+    "word": "camisa",
+    "meaning": "男衬衣",
+    "pos": "f."
+  },
+  {
+    "unit": 5,
+    "word": "calcetín",
+    "meaning": "袜子",
+    "pos": "m."
+  },
+  {
+    "unit": 5,
+    "word": "ése,sa",
+    "meaning": "那个",
+    "pos": "pron."
+  },
+  {
+    "unit": 5,
+    "word": "azul",
+    "meaning": "蓝色的",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "negro",
+    "meaning": "黑色的",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "blanco",
+    "meaning": "白色的",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "aqui",
+    "meaning": "这里",
+    "pos": "adv."
+  },
+  {
+    "unit": 5,
+    "word": "pero",
+    "meaning": "但是",
+    "pos": "conj."
+  },
+  {
+    "unit": 5,
+    "word": "bueno",
+    "meaning": "好的",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "tampoco",
+    "meaning": "也不",
+    "pos": "adv."
+  },
+  {
+    "unit": 5,
+    "word": "feo",
+    "meaning": "难看的",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "cuántos",
+    "meaning": "多少",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "estos,tas",
+    "meaning": "这些",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "ese,sa",
+    "meaning": "那个",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "esos,sas",
+    "meaning": "那些",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "aquel,lla",
+    "meaning": "那个",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "aquellos,llas",
+    "meaning": "那些",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "trece",
+    "meaning": "十三",
+    "pos": "num."
+  },
+  {
+    "unit": 5,
+    "word": "malo",
+    "meaning": "坏的",
+    "pos": "adj."
+  },
+  {
+    "unit": 5,
+    "word": "catorce",
+    "meaning": "十四",
+    "pos": "num."
+  },
+  {
+    "unit": 5,
+    "word": "quince",
+    "meaning": "十五",
+    "pos": "num."
+  },
+  {
+    "unit": 6,
+    "word": "foto",
+    "meaning": "照片",
+    "pos": "f."
+  },
+  {
+    "unit": 6,
+    "word": "abuelo,la",
+    "meaning": "祖父（母），外祖父（母）",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 6,
+    "word": "limpio",
+    "meaning": "干净的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "ordenado",
+    "meaning": "整齐的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "sucio",
+    "meaning": "脏的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "veinticinco",
+    "meaning": "二十五",
+    "pos": "num."
+  },
+  {
+    "unit": 6,
+    "word": "moreno",
+    "meaning": "（皮肤）黑的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "taxista",
+    "meaning": "出租车司机",
+    "pos": "m."
+  },
+  {
+    "unit": 6,
+    "word": "cincuenta",
+    "meaning": "五十",
+    "pos": "num."
+  },
+  {
+    "unit": 6,
+    "word": "bajo",
+    "meaning": "矮的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "alto",
+    "meaning": "高的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "fuerte",
+    "meaning": "强壮的，有力的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "alegre",
+    "meaning": "开朗的",
+    "pos": "adj."
+  },
+  {
+    "unit": 6,
+    "word": "mujer",
+    "meaning": "女儿，妇女",
+    "pos": "f."
+  },
+  {
+    "unit": 6,
+    "word": "rubio",
+    "meaning": "金黄色的",
+    "pos": "adj."
+  },
+  {
+    "unit": 7,
+    "word": "adónde",
+    "meaning": "去哪里",
+    "pos": "adv."
+  },
+  {
+    "unit": 7,
+    "word": "Luis",
+    "meaning": "路易斯（男人名）"
+  },
+  {
+    "unit": 7,
+    "word": "blusa",
+    "meaning": "女士衬衣",
+    "pos": "f."
+  },
+  {
+    "unit": 7,
+    "word": "primo,ma",
+    "meaning": "表兄弟，表姐妹",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 7,
+    "word": "estudiar",
+    "meaning": "学习",
+    "pos": "tr."
+  },
+  {
+    "unit": 7,
+    "word": "universidad",
+    "meaning": "大学",
+    "pos": "f."
+  },
+  {
+    "unit": 7,
+    "word": "rojo",
+    "meaning": "红色的",
+    "pos": "adj."
+  },
+  {
+    "unit": 7,
+    "word": "a",
+    "meaning": "朝……，向……（方向）",
+    "pos": "prep."
+  },
+  {
+    "unit": 7,
+    "word": "facultad",
+    "meaning": "系",
+    "pos": "f."
+  },
+  {
+    "unit": 7,
+    "word": "peluquero,ra",
+    "meaning": "理发师",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 7,
+    "word": "hablar",
+    "meaning": "谈，聊天",
+    "pos": "intr."
+  },
+  {
+    "unit": 7,
+    "word": "con",
+    "meaning": "和",
+    "pos": "prep."
+  },
+  {
+    "unit": 7,
+    "word": "también",
+    "meaning": "同样，也",
+    "pos": "adv."
+  },
+  {
+    "unit": 7,
+    "word": "profesor,ra",
+    "meaning": "教师，老师",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 7,
+    "word": "lejos de",
+    "meaning": "离……远"
+  },
+  {
+    "unit": 7,
+    "word": "hoy",
+    "meaning": "今天",
+    "pos": "adv."
+  },
+  {
+    "unit": 7,
+    "word": "mayor",
+    "meaning": "老的，年龄大的",
+    "pos": "adj."
+  },
+  {
+    "unit": 7,
+    "word": "domingo",
+    "meaning": "星期天",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "trabajar",
+    "meaning": "劳动",
+    "pos": "intr."
+  },
+  {
+    "unit": 7,
+    "word": "setenta y ocho",
+    "meaning": "七十八",
+    "pos": "num."
+  },
+  {
+    "unit": 7,
+    "word": "descansar",
+    "meaning": "休息",
+    "pos": "intr."
+  },
+  {
+    "unit": 7,
+    "word": "hospital",
+    "meaning": "医院",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "mercado",
+    "meaning": "市场",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "dieciséis",
+    "meaning": "十六",
+    "pos": "num."
+  },
+  {
+    "unit": 7,
+    "word": "comprar",
+    "meaning": "采购，买",
+    "pos": "tr."
+  },
+  {
+    "unit": 7,
+    "word": "comida",
+    "meaning": "食品",
+    "pos": "f."
+  },
+  {
+    "unit": 7,
+    "word": "después",
+    "meaning": "然后，以后",
+    "pos": "adv."
+  },
+  {
+    "unit": 7,
+    "word": "para",
+    "meaning": "为了",
+    "pos": "prep."
+  },
+  {
+    "unit": 7,
+    "word": "tío,a",
+    "meaning": "伯，叔，舅；姨，姑，舅妈",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 7,
+    "word": "hacer",
+    "meaning": "做，干",
+    "pos": "tr."
+  },
+  {
+    "unit": 7,
+    "word": "pregunta",
+    "meaning": "问题",
+    "pos": "f."
+  },
+  {
+    "unit": 7,
+    "word": "por qué",
+    "meaning": "为什么",
+    "pos": "conj."
+  },
+  {
+    "unit": 7,
+    "word": "porque",
+    "meaning": "因为",
+    "pos": "conj."
+  },
+  {
+    "unit": 7,
+    "word": "hacer pregunta",
+    "meaning": "提问题"
+  },
+  {
+    "unit": 7,
+    "word": "lunes",
+    "meaning": "星期一",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "martes",
+    "meaning": "星期二",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "compañero,ra",
+    "meaning": "同伴，同学",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 7,
+    "word": "miércoles",
+    "meaning": "星期三",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "jueves",
+    "meaning": "星期四",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "viernes",
+    "meaning": "星期五",
+    "pos": "m."
+  },
+  {
+    "unit": 7,
+    "word": "contestar",
+    "meaning": "回答",
+    "pos": "tr."
+  },
+  {
+    "unit": 7,
+    "word": "sábado",
+    "meaning": "星期六",
+    "pos": "m."
+  },
+  {
+    "unit": 8,
+    "word": "clase",
+    "meaning": "课堂，上课",
+    "pos": "f."
+  },
+  {
+    "unit": 8,
+    "word": "alguno",
+    "meaning": "一些",
+    "pos": "adj."
+  },
+  {
+    "unit": 8,
+    "word": "tener",
+    "meaning": "有",
+    "pos": "tr."
+  },
+  {
+    "unit": 8,
+    "word": "difícil",
+    "meaning": "难的",
+    "pos": "adj."
+  },
+  {
+    "unit": 8,
+    "word": "tener que",
+    "meaning": "必须，应该"
+  },
+  {
+    "unit": 8,
+    "word": "por la tarde",
+    "meaning": "下午"
+  },
+  {
+    "unit": 8,
+    "word": "español",
+    "meaning": "西班牙语；西班牙人",
+    "pos": "m.;m.,f."
+  },
+  {
+    "unit": 8,
+    "word": "ver",
+    "meaning": "看，看望",
+    "pos": "tr."
+  },
+  {
+    "unit": 8,
+    "word": "aprender",
+    "meaning": "学，学习",
+    "pos": "tr."
+  },
+  {
+    "unit": 8,
+    "word": "enfermo",
+    "meaning": "病了",
+    "pos": "adj."
+  },
+  {
+    "unit": 8,
+    "word": "lección",
+    "meaning": "课",
+    "pos": "f."
+  },
+  {
+    "unit": 8,
+    "word": "hay que",
+    "meaning": "应该，必须"
+  },
+  {
+    "unit": 8,
+    "word": "primero",
+    "meaning": "首先",
+    "pos": "adv."
+  },
+  {
+    "unit": 8,
+    "word": "leer",
+    "meaning": "念，读",
+    "pos": "tr."
+  },
+  {
+    "unit": 8,
+    "word": "semana",
+    "meaning": "星期",
+    "pos": "f."
+  },
+  {
+    "unit": 8,
+    "word": "texto",
+    "meaning": "课文",
+    "pos": "m."
+  },
+  {
+    "unit": 8,
+    "word": "grupo",
+    "meaning": "班，组",
+    "pos": "m."
+  },
+  {
+    "unit": 8,
+    "word": "comentar",
+    "meaning": "评论",
+    "pos": "tr."
+  },
+  {
+    "unit": 8,
+    "word": "muchacho,cha",
+    "meaning": "男孩，女孩",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 8,
+    "word": "o",
+    "meaning": "或者",
+    "pos": "conj."
+  },
+  {
+    "unit": 8,
+    "word": "inglés",
+    "meaning": "英语；英国人",
+    "pos": "m.;m.,f."
+  },
+  {
+    "unit": 8,
+    "word": "poder",
+    "meaning": "能够",
+    "pos": "tr."
+  },
+  {
+    "unit": 8,
+    "word": "francés",
+    "meaning": "法语；法国人",
+    "pos": "m.;m.,f."
+  },
+  {
+    "unit": 8,
+    "word": "chino",
+    "meaning": "中文",
+    "pos": "m."
+  },
+  {
+    "unit": 8,
+    "word": "alemán",
+    "meaning": "德语；德国人",
+    "pos": "m.;m.,f."
+  },
+  {
+    "unit": 8,
+    "word": "explicar",
+    "meaning": "解释，讲解",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "vivir",
+    "meaning": "居住",
+    "pos": "intr."
+  },
+  {
+    "unit": 9,
+    "word": "palabra",
+    "meaning": "词",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "China",
+    "meaning": "中国"
+  },
+  {
+    "unit": 9,
+    "word": "cuarto de baño",
+    "meaning": "卫生间"
+  },
+  {
+    "unit": 9,
+    "word": "suyo",
+    "meaning": "他的；他们的；您的",
+    "pos": "adj."
+  },
+  {
+    "unit": 9,
+    "word": "fiebre",
+    "meaning": "发烧",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "venir",
+    "meaning": "来",
+    "pos": "intr."
+  },
+  {
+    "unit": 9,
+    "word": "España",
+    "meaning": "西班牙"
+  },
+  {
+    "unit": 9,
+    "word": "coche",
+    "meaning": "轿车",
+    "pos": "m."
+  },
+  {
+    "unit": 9,
+    "word": "querer",
+    "meaning": "想，希望",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "pasar",
+    "meaning": "过，度过",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "día",
+    "meaning": "天",
+    "pos": "m."
+  },
+  {
+    "unit": 9,
+    "word": "auscultar",
+    "meaning": "听诊",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "gracias",
+    "meaning": "谢谢",
+    "pos": "f. Pl."
+  },
+  {
+    "unit": 9,
+    "word": "llave",
+    "meaning": "钥匙",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "dar",
+    "meaning": "给",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "tomar el pulso",
+    "meaning": "号脉"
+  },
+  {
+    "unit": 9,
+    "word": "claro",
+    "meaning": "当然了",
+    "pos": "adv."
+  },
+  {
+    "unit": 9,
+    "word": "abrir",
+    "meaning": "开，打开",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "gripe",
+    "meaning": "感冒",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "puerta",
+    "meaning": "门",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "guardar",
+    "meaning": "保存",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "bien",
+    "meaning": "好",
+    "pos": "adv."
+  },
+  {
+    "unit": 9,
+    "word": "recetar",
+    "meaning": "开处方，开药",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "muy",
+    "meaning": "很",
+    "pos": "adv."
+  },
+  {
+    "unit": 9,
+    "word": "comer",
+    "meaning": "吃饭",
+    "pos": "tr.,intr."
+  },
+  {
+    "unit": 9,
+    "word": "pastilla",
+    "meaning": "药片",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "ya",
+    "meaning": "现在，已经",
+    "pos": "adv."
+  },
+  {
+    "unit": 9,
+    "word": "película",
+    "meaning": "电影",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "esperar",
+    "meaning": "等待，希望",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "al lado de",
+    "meaning": "在……旁边"
+  },
+  {
+    "unit": 9,
+    "word": "lavabo",
+    "meaning": "卫生间",
+    "pos": "m."
+  },
+  {
+    "unit": 9,
+    "word": "prisa",
+    "meaning": "急事，着急",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "farmacia",
+    "meaning": "药店",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "mío",
+    "meaning": "我的",
+    "pos": "adj."
+  },
+  {
+    "unit": 9,
+    "word": "decir",
+    "meaning": "说",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "carnet",
+    "meaning": "证件",
+    "pos": "m."
+  },
+  {
+    "unit": 9,
+    "word": "allí",
+    "meaning": "那里",
+    "pos": "adv."
+  },
+  {
+    "unit": 9,
+    "word": "llevarse",
+    "meaning": "带走",
+    "pos": "prnl."
+  },
+  {
+    "unit": 9,
+    "word": "verdad",
+    "meaning": "真理，事实",
+    "pos": "f."
+  },
+  {
+    "unit": 9,
+    "word": "escribir",
+    "meaning": "写",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "llevar",
+    "meaning": "送，带",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "discutir",
+    "meaning": "讨论",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "saber",
+    "meaning": "知道",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "ahora mismo",
+    "meaning": "立即，马上"
+  },
+  {
+    "unit": 9,
+    "word": "cantar",
+    "meaning": "唱歌",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "dormir",
+    "meaning": "睡觉",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "beber",
+    "meaning": "喝",
+    "pos": "tr."
+  },
+  {
+    "unit": 9,
+    "word": "señorita",
+    "meaning": "小姐",
+    "pos": "f."
+  },
+  {
+    "unit": 10,
+    "word": "hola",
+    "meaning": "喂，你好",
+    "pos": "interj."
+  },
+  {
+    "unit": 10,
+    "word": "receta",
+    "meaning": "处方",
+    "pos": "f."
+  },
+  {
+    "unit": 10,
+    "word": "edificio",
+    "meaning": "楼房",
+    "pos": "m."
+  },
+  {
+    "unit": 10,
+    "word": "más",
+    "meaning": "更，更加",
+    "pos": "adv."
+  },
+  {
+    "unit": 10,
+    "word": "por",
+    "meaning": "为了，因为",
+    "pos": "prep."
+  },
+  {
+    "unit": 10,
+    "word": "todo",
+    "meaning": "所有的",
+    "pos": "adj."
+  },
+  {
+    "unit": 10,
+    "word": "minuto",
+    "meaning": "分钟",
+    "pos": "m."
+  },
+  {
+    "unit": 10,
+    "word": "inteligente",
+    "meaning": "聪明的",
+    "pos": "adj."
+  },
+  {
+    "unit": 10,
+    "word": "colegio",
+    "meaning": "学校",
+    "pos": "m."
+  },
+  {
+    "unit": 10,
+    "word": "volver",
+    "meaning": "回来",
+    "pos": "intr."
+  },
+  {
+    "unit": 10,
+    "word": "tienda",
+    "meaning": "商店",
+    "pos": "f."
+  },
+  {
+    "unit": 10,
+    "word": "entregar",
+    "meaning": "交，给",
+    "pos": "tr."
+  },
+  {
+    "unit": 10,
+    "word": "artículo",
+    "meaning": "商品",
+    "pos": "m."
+  },
+  {
+    "unit": 10,
+    "word": "hasta luego",
+    "meaning": "再见"
+  },
+  {
+    "unit": 10,
+    "word": "barato",
+    "meaning": "便宜的",
+    "pos": "adj."
+  },
+  {
+    "unit": 10,
+    "word": "cosa",
+    "meaning": "东西",
+    "pos": "f."
+  },
+  {
+    "unit": 10,
+    "word": "adiós",
+    "meaning": "再见",
+    "pos": "m."
+  },
+  {
+    "unit": 10,
+    "word": "vecino",
+    "meaning": "邻居",
+    "pos": "m."
+  },
+  {
+    "unit": 10,
+    "word": "necesitar",
+    "meaning": "需要",
+    "pos": "tr."
+  },
+  {
+    "unit": 10,
+    "word": "vender",
+    "meaning": "卖",
+    "pos": "tr."
+  },
+  {
+    "unit": 10,
+    "word": "temprano",
+    "meaning": "早",
+    "pos": "adv."
+  },
+  {
+    "unit": 10,
+    "word": "dejar",
+    "meaning": "放；搁下",
+    "pos": "tr."
+  },
+  {
+    "unit": 10,
+    "word": "cerrar",
+    "meaning": "关",
+    "pos": "tr."
+  },
+  {
+    "unit": 10,
+    "word": "creer",
+    "meaning": "相信",
+    "pos": "tr."
+  },
+  {
+    "unit": 10,
+    "word": "numeral cardinal",
+    "meaning": "指量数词"
+  },
+  {
+    "unit": 10,
+    "word": "autobús",
+    "meaning": "公共汽车",
+    "pos": "m."
+  },
+  {
+    "unit": 10,
+    "word": "uno",
+    "meaning": "1"
+  },
+  {
+    "unit": 10,
+    "word": "dos",
+    "meaning": "2"
+  },
+  {
+    "unit": 10,
+    "word": "bicicleta",
+    "meaning": "自行车",
+    "pos": "f."
+  },
+  {
+    "unit": 10,
+    "word": "tres",
+    "meaning": "3"
+  },
+  {
+    "unit": 10,
+    "word": "medicina",
+    "meaning": "药",
+    "pos": "f."
+  },
+  {
+    "unit": 10,
+    "word": "cuatro",
+    "meaning": "4"
+  },
+  {
+    "unit": 11,
+    "word": "biblioteca",
+    "meaning": "图书馆",
+    "pos": "f."
+  },
+  {
+    "unit": 11,
+    "word": "cinco",
+    "meaning": "5"
+  },
+  {
+    "unit": 11,
+    "word": "mañana",
+    "meaning": "上午",
+    "pos": "f."
+  },
+  {
+    "unit": 11,
+    "word": "seis",
+    "meaning": "6"
+  },
+  {
+    "unit": 11,
+    "word": "lector,ra",
+    "meaning": "读者",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 11,
+    "word": "siete",
+    "meaning": "7"
+  },
+  {
+    "unit": 11,
+    "word": "pedir",
+    "meaning": "求借",
+    "pos": "tr."
+  },
+  {
+    "unit": 11,
+    "word": "ocho",
+    "meaning": "8"
+  },
+  {
+    "unit": 11,
+    "word": "encontrar",
+    "meaning": "找到",
+    "pos": "tr."
+  },
+  {
+    "unit": 11,
+    "word": "título",
+    "meaning": "题目",
+    "pos": "m."
+  },
+  {
+    "unit": 11,
+    "word": "nueve",
+    "meaning": "9"
+  },
+  {
+    "unit": 11,
+    "word": "número",
+    "meaning": "号码",
+    "pos": "m."
+  },
+  {
+    "unit": 11,
+    "word": "diez",
+    "meaning": "10"
+  },
+  {
+    "unit": 11,
+    "word": "papel",
+    "meaning": "纸",
+    "pos": "m."
+  },
+  {
+    "unit": 11,
+    "word": "once",
+    "meaning": "11"
+  },
+  {
+    "unit": 11,
+    "word": "pasar",
+    "meaning": "递给",
+    "pos": "tr."
+  },
+  {
+    "unit": 11,
+    "word": "doce",
+    "meaning": "12"
+  },
+  {
+    "unit": 11,
+    "word": "bibliotecario,ria",
+    "meaning": "m.,f.图书管理员"
+  },
+  {
+    "unit": 11,
+    "word": "buscar",
+    "meaning": "寻找",
+    "pos": "tr."
+  },
+  {
+    "unit": 11,
+    "word": "trece",
+    "meaning": "13"
+  },
+  {
+    "unit": 11,
+    "word": "traer",
+    "meaning": "带来",
+    "pos": "tr."
+  },
+  {
+    "unit": 11,
+    "word": "catorce",
+    "meaning": "14"
+  },
+  {
+    "unit": 11,
+    "word": "dentro de",
+    "meaning": "在……之内"
+  },
+  {
+    "unit": 11,
+    "word": "quince",
+    "meaning": "15"
+  },
+  {
+    "unit": 11,
+    "word": "devolver",
+    "meaning": "归还",
+    "pos": "tr."
+  },
+  {
+    "unit": 11,
+    "word": "dieciséis",
+    "meaning": "16"
+  },
+  {
+    "unit": 11,
+    "word": "mes",
+    "meaning": "月",
+    "pos": "m."
+  },
+  {
+    "unit": 11,
+    "word": "si",
+    "meaning": "如果",
+    "pos": "conj."
+  },
+  {
+    "unit": 11,
+    "word": "diecisiete",
+    "meaning": "17"
+  },
+  {
+    "unit": 11,
+    "word": "prestar",
+    "meaning": "出借",
+    "pos": "tr."
+  },
+  {
+    "unit": 11,
+    "word": "dieciocho",
+    "meaning": "18"
+  },
+  {
+    "unit": 11,
+    "word": "hora",
+    "meaning": "小时",
+    "pos": "f."
+  },
+  {
+    "unit": 11,
+    "word": "diecinueve",
+    "meaning": "19"
+  },
+  {
+    "unit": 11,
+    "word": "cuarto",
+    "meaning": "一刻钟",
+    "pos": "m."
+  },
+  {
+    "unit": 11,
+    "word": "veinte",
+    "meaning": "20"
+  },
+  {
+    "unit": 11,
+    "word": "media",
+    "meaning": "半",
+    "pos": "f."
+  },
+  {
+    "unit": 11,
+    "word": "cuántos",
+    "meaning": "什么时候",
+    "pos": "adv."
+  },
+  {
+    "unit": 11,
+    "word": "veintiuno",
+    "meaning": "21"
+  },
+  {
+    "unit": 11,
+    "word": "segundo",
+    "meaning": "秒",
+    "pos": "m."
+  },
+  {
+    "unit": 11,
+    "word": "veintidós",
+    "meaning": "22"
+  },
+  {
+    "unit": 11,
+    "word": "mañana",
+    "meaning": "明天",
+    "pos": "adv."
+  },
+  {
+    "unit": 11,
+    "word": "veintitrés",
+    "meaning": "23"
+  },
+  {
+    "unit": 11,
+    "word": "menos",
+    "meaning": "差",
+    "pos": "adv."
+  },
+  {
+    "unit": 12,
+    "word": "entre",
+    "meaning": "在……之间",
+    "pos": "prep."
+  },
+  {
+    "unit": 12,
+    "word": "veinticuatro",
+    "meaning": "24"
+  },
+  {
+    "unit": 12,
+    "word": "veinticinco",
+    "meaning": "25"
+  },
+  {
+    "unit": 12,
+    "word": "repaso",
+    "meaning": "复习",
+    "pos": "m."
+  },
+  {
+    "unit": 12,
+    "word": "veintiséis",
+    "meaning": "26"
+  },
+  {
+    "unit": 12,
+    "word": "jardín",
+    "meaning": "花园",
+    "pos": "m."
+  },
+  {
+    "unit": 12,
+    "word": "veintisiete",
+    "meaning": "27"
+  },
+  {
+    "unit": 12,
+    "word": "tarde",
+    "meaning": "晚，迟",
+    "pos": "adv."
+  },
+  {
+    "unit": 12,
+    "word": "veintiocho",
+    "meaning": "28"
+  },
+  {
+    "unit": 12,
+    "word": "compra",
+    "meaning": "买",
+    "pos": "f."
+  },
+  {
+    "unit": 12,
+    "word": "veintinueve",
+    "meaning": "29"
+  },
+  {
+    "unit": 12,
+    "word": "invierno",
+    "meaning": "冬天",
+    "pos": "m."
+  },
+  {
+    "unit": 12,
+    "word": "treinta",
+    "meaning": "30"
+  },
+  {
+    "unit": 12,
+    "word": "campo",
+    "meaning": "农村，田野",
+    "pos": "m."
+  },
+  {
+    "unit": 12,
+    "word": "treinta y uno",
+    "meaning": "31"
+  },
+  {
+    "unit": 12,
+    "word": "secundario",
+    "meaning": "中级的",
+    "pos": "adj."
+  },
+  {
+    "unit": 12,
+    "word": "treinta y dos",
+    "meaning": "32"
+  },
+  {
+    "unit": 12,
+    "word": "levantarse",
+    "meaning": "起床",
+    "pos": "prnl."
+  },
+  {
+    "unit": 12,
+    "word": "cuarenta",
+    "meaning": "40"
+  },
+  {
+    "unit": 12,
+    "word": "vestirse",
+    "meaning": "穿衣",
+    "pos": "prnl."
+  },
+  {
+    "unit": 12,
+    "word": "cincuenta",
+    "meaning": "50"
+  },
+  {
+    "unit": 12,
+    "word": "hacer la cama",
+    "meaning": "整理床铺"
+  },
+  {
+    "unit": 12,
+    "word": "sesenta",
+    "meaning": "60"
+  },
+  {
+    "unit": 12,
+    "word": "asearse",
+    "meaning": "洗漱",
+    "pos": "prnl."
+  },
+  {
+    "unit": 12,
+    "word": "setenta",
+    "meaning": "70"
+  },
+  {
+    "unit": 12,
+    "word": "rápido",
+    "meaning": "快",
+    "pos": "adv."
+  },
+  {
+    "unit": 12,
+    "word": "ochenta",
+    "meaning": "80"
+  },
+  {
+    "unit": 12,
+    "word": "entrar",
+    "meaning": "进入",
+    "pos": "intr."
+  },
+  {
+    "unit": 12,
+    "word": "noventa",
+    "meaning": "90"
+  },
+  {
+    "unit": 12,
+    "word": "empezar",
+    "meaning": "开始",
+    "pos": "tr."
+  },
+  {
+    "unit": 12,
+    "word": "cien (ciento超过100时用)",
+    "meaning": "100"
+  },
+  {
+    "unit": 12,
+    "word": "preparar",
+    "meaning": "准备",
+    "pos": "tr."
+  },
+  {
+    "unit": 12,
+    "word": "efectuar",
+    "meaning": "开展，实行",
+    "pos": "tr."
+  },
+  {
+    "unit": 12,
+    "word": "desayuno",
+    "meaning": "早饭",
+    "pos": "m."
+  },
+  {
+    "unit": 12,
+    "word": "actividad",
+    "meaning": "活动",
+    "pos": "f."
+  },
+  {
+    "unit": 12,
+    "word": "ocuparse",
+    "meaning": "忙于（做某事）",
+    "pos": "prnl."
+  },
+  {
+    "unit": 12,
+    "word": "por ejemplo",
+    "meaning": "比如"
+  },
+  {
+    "unit": 13,
+    "word": "limpiar",
+    "meaning": "打扫，清洁",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "gente",
+    "meaning": "人，人们",
+    "pos": "f."
+  },
+  {
+    "unit": 13,
+    "word": "otro",
+    "meaning": "另一个",
+    "pos": "adj."
+  },
+  {
+    "unit": 13,
+    "word": "antes",
+    "meaning": "以前，之前",
+    "pos": "adv."
+  },
+  {
+    "unit": 13,
+    "word": "listo",
+    "meaning": "停当，好了",
+    "pos": "adj."
+  },
+  {
+    "unit": 13,
+    "word": "despertar",
+    "meaning": "叫醒",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "un poco más",
+    "meaning": "较……多一点"
+  },
+  {
+    "unit": 13,
+    "word": "desayunar",
+    "meaning": "吃早饭",
+    "pos": "intr."
+  },
+  {
+    "unit": 13,
+    "word": "salir",
+    "meaning": "离开，出去",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "recordar",
+    "meaning": "记忆，记住",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "almorzar",
+    "meaning": "吃午饭",
+    "pos": "adj."
+  },
+  {
+    "unit": 13,
+    "word": "trabajo",
+    "meaning": "工作",
+    "pos": "m."
+  },
+  {
+    "unit": 13,
+    "word": "junto",
+    "meaning": "一起",
+    "pos": "adj."
+  },
+  {
+    "unit": 13,
+    "word": "regresar",
+    "meaning": "回来，返回",
+    "pos": "intr."
+  },
+  {
+    "unit": 13,
+    "word": "clase",
+    "meaning": "课，课时",
+    "pos": "f."
+  },
+  {
+    "unit": 13,
+    "word": "hasta",
+    "meaning": "直到",
+    "pos": "prep."
+  },
+  {
+    "unit": 13,
+    "word": "reunirse",
+    "meaning": "会集，聚集",
+    "pos": "prnl."
+  },
+  {
+    "unit": 13,
+    "word": "comenzar",
+    "meaning": "开始",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "cenar",
+    "meaning": "吃晚饭",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "televisión",
+    "meaning": "电视",
+    "pos": "f."
+  },
+  {
+    "unit": 13,
+    "word": "diferente",
+    "meaning": "不同，有级别的",
+    "pos": "adj."
+  },
+  {
+    "unit": 13,
+    "word": "tener mucho que hacer",
+    "meaning": "有许多事情要做"
+  },
+  {
+    "unit": 13,
+    "word": "país",
+    "meaning": "国度，国家",
+    "pos": "m."
+  },
+  {
+    "unit": 13,
+    "word": "siempre",
+    "meaning": "永远，总是",
+    "pos": "adv."
+  },
+  {
+    "unit": 13,
+    "word": "ocupado",
+    "meaning": "忙碌，忙于",
+    "pos": "p.p."
+  },
+  {
+    "unit": 13,
+    "word": "cambiar",
+    "meaning": "变化，改换",
+    "pos": "intr."
+  },
+  {
+    "unit": 13,
+    "word": "ducharse",
+    "meaning": "淋浴",
+    "pos": "prnl."
+  },
+  {
+    "unit": 13,
+    "word": "medianoche",
+    "meaning": "半夜",
+    "pos": "f."
+  },
+  {
+    "unit": 13,
+    "word": "estación",
+    "meaning": "季节",
+    "pos": "f."
+  },
+  {
+    "unit": 13,
+    "word": "acostarse",
+    "meaning": "上床",
+    "pos": "prnl."
+  },
+  {
+    "unit": 13,
+    "word": "pensar",
+    "meaning": "想",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "lavarse",
+    "meaning": "洗脸",
+    "pos": "prnl."
+  },
+  {
+    "unit": 13,
+    "word": "ayudar",
+    "meaning": "帮助",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "cepillar",
+    "meaning": "刷",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "quehacer",
+    "meaning": "事情，家务",
+    "pos": "m."
+  },
+  {
+    "unit": 13,
+    "word": "no sólo...sino también",
+    "meaning": "不仅……而且"
+  },
+  {
+    "unit": 13,
+    "word": "diente",
+    "meaning": "牙齿",
+    "pos": "m."
+  },
+  {
+    "unit": 13,
+    "word": "tanto",
+    "meaning": "如此，这样",
+    "pos": "adv."
+  },
+  {
+    "unit": 13,
+    "word": "empresario,ria",
+    "meaning": "企业家",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 13,
+    "word": "peinarse",
+    "meaning": "梳头",
+    "pos": "prnl."
+  },
+  {
+    "unit": 13,
+    "word": "ama de casa",
+    "meaning": "家庭主妇"
+  },
+  {
+    "unit": 13,
+    "word": "cierto",
+    "meaning": "确实的",
+    "pos": "adj."
+  },
+  {
+    "unit": 13,
+    "word": "tomar",
+    "meaning": "拿起；（此处）吃",
+    "pos": "tr."
+  },
+  {
+    "unit": 13,
+    "word": "qué va",
+    "meaning": "哪里，哪哟"
+  },
+  {
+    "unit": 13,
+    "word": "por la mañana",
+    "meaning": "上午"
+  },
+  {
+    "unit": 13,
+    "word": "entonces",
+    "meaning": "于是，那么",
+    "pos": "adv."
+  },
+  {
+    "unit": 13,
+    "word": "antes que nadie",
+    "meaning": "比（谁）都早"
+  },
+  {
+    "unit": 13,
+    "word": "recreo",
+    "meaning": "休憩",
+    "pos": "m."
+  },
+  {
+    "unit": 13,
+    "word": "seguro",
+    "meaning": "肯定，保准",
+    "pos": "adv."
+  },
+  {
+    "unit": 13,
+    "word": "efectivamente",
+    "meaning": "确实如此",
+    "pos": "adv."
+  },
+  {
+    "unit": 13,
+    "word": "primero",
+    "meaning": "第一",
+    "pos": "adj."
+  },
+  {
+    "unit": 13,
+    "word": "así",
+    "meaning": "这样",
+    "pos": "adv."
+  },
+  {
+    "unit": 14,
+    "word": "acerca de",
+    "meaning": "关于"
+  },
+  {
+    "unit": 14,
+    "word": "último",
+    "meaning": "最后的",
+    "pos": "adj."
+  },
+  {
+    "unit": 14,
+    "word": "horario",
+    "meaning": "作息时间，时刻表",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "durar",
+    "meaning": "持续",
+    "pos": "intr."
+  },
+  {
+    "unit": 14,
+    "word": "parte",
+    "meaning": "部分，地方",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "al mediodía",
+    "meaning": "中午"
+  },
+  {
+    "unit": 14,
+    "word": "deber",
+    "meaning": "应该，想必",
+    "pos": "tr."
+  },
+  {
+    "unit": 14,
+    "word": "bastante",
+    "meaning": "相当的",
+    "pos": "adj."
+  },
+  {
+    "unit": 14,
+    "word": "según",
+    "meaning": "根据",
+    "pos": "prep."
+  },
+  {
+    "unit": 14,
+    "word": "tiempo",
+    "meaning": "时间",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "manera",
+    "meaning": "方式",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "Occidente",
+    "meaning": "西方",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "preferir",
+    "meaning": "喜欢，偏爱",
+    "pos": "tr."
+  },
+  {
+    "unit": 14,
+    "word": "notable",
+    "meaning": "显著的",
+    "pos": "adj."
+  },
+  {
+    "unit": 14,
+    "word": "echar siesta",
+    "meaning": "睡午觉"
+  },
+  {
+    "unit": 14,
+    "word": "plato",
+    "meaning": "盘子；（每道）菜",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "breve",
+    "meaning": "短暂的",
+    "pos": "adj."
+  },
+  {
+    "unit": 14,
+    "word": "junto con",
+    "meaning": "跟……一起"
+  },
+  {
+    "unit": 14,
+    "word": "volver + in",
+    "meaning": "重新（做某事）",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "arroz",
+    "meaning": "稻子，大米，米饭",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "tarde",
+    "meaning": "下午",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "pan",
+    "meaning": "面包",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "palillo",
+    "meaning": "小棍儿；筷子",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "a partir de",
+    "meaning": "从……起"
+  },
+  {
+    "unit": 14,
+    "word": "sopa",
+    "meaning": "汤",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "deporte",
+    "meaning": "体育活动",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "segundo",
+    "meaning": "第二个",
+    "pos": "adj."
+  },
+  {
+    "unit": 14,
+    "word": "cena",
+    "meaning": "晚饭",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "tras",
+    "meaning": "在……之后",
+    "pos": "prep."
+  },
+  {
+    "unit": 14,
+    "word": "igual que",
+    "meaning": "跟……一样"
+  },
+  {
+    "unit": 14,
+    "word": "por último",
+    "meaning": "最后"
+  },
+  {
+    "unit": 14,
+    "word": "diferencia",
+    "meaning": "区别",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "postre",
+    "meaning": "饭后甜食",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "café",
+    "meaning": "咖啡",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "algo",
+    "meaning": "一些；一点",
+    "pos": "pron,;adv."
+  },
+  {
+    "unit": 14,
+    "word": "costumbre",
+    "meaning": "习惯",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "tan... como",
+    "meaning": "跟……一样"
+  },
+  {
+    "unit": 14,
+    "word": "occidental",
+    "meaning": "西方的",
+    "pos": "adj."
+  },
+  {
+    "unit": 14,
+    "word": "almuerzo",
+    "meaning": "午饭",
+    "pos": "m."
+  },
+  {
+    "unit": 14,
+    "word": "persona",
+    "meaning": "（每个）人",
+    "pos": "f."
+  },
+  {
+    "unit": 14,
+    "word": "incluso",
+    "meaning": "甚至",
+    "pos": "adv."
+  },
+  {
+    "unit": 14,
+    "word": "propio",
+    "meaning": "自己的",
+    "pos": "adj."
+  },
+  {
+    "unit": 14,
+    "word": "cubierto m.（",
+    "meaning": "整套）餐具（刀、叉、匙）"
+  },
+  {
+    "unit": 15,
+    "word": "casi",
+    "meaning": "几乎",
+    "pos": "adv."
+  },
+  {
+    "unit": 15,
+    "word": "vaso",
+    "meaning": "杯子",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "tenedor",
+    "meaning": "叉",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "leche",
+    "meaning": "奶，乳汁",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "cuchillo",
+    "meaning": "刀",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "huevo",
+    "meaning": "鸡蛋",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "cuchara",
+    "meaning": "勺儿，汤匙",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "sin",
+    "meaning": "没有，不",
+    "pos": "prep."
+  },
+  {
+    "unit": 15,
+    "word": "mirar",
+    "meaning": "看望",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "salud",
+    "meaning": "身体",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "restaurante",
+    "meaning": "饭馆",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "frecuentemente",
+    "meaning": "经常地",
+    "pos": "adv."
+  },
+  {
+    "unit": 15,
+    "word": "allá",
+    "meaning": "那边",
+    "pos": "adv."
+  },
+  {
+    "unit": 15,
+    "word": "vez",
+    "meaning": "次，回",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "por favor",
+    "meaning": "请，劳驾"
+  },
+  {
+    "unit": 15,
+    "word": "al día",
+    "meaning": "每天"
+  },
+  {
+    "unit": 15,
+    "word": "libre",
+    "meaning": "自由的，空的",
+    "pos": "adj."
+  },
+  {
+    "unit": 15,
+    "word": "ni",
+    "meaning": "也不，甚至不",
+    "pos": "conj."
+  },
+  {
+    "unit": 15,
+    "word": "junto a",
+    "meaning": "靠近……的"
+  },
+  {
+    "unit": 15,
+    "word": "servir(se)",
+    "meaning": "服务；进餐",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 15,
+    "word": "ventana",
+    "meaning": "窗户",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "mismo",
+    "meaning": "同一个",
+    "pos": "adj."
+  },
+  {
+    "unit": 15,
+    "word": "sentarse",
+    "meaning": "坐下",
+    "pos": "prnl."
+  },
+  {
+    "unit": 15,
+    "word": "sobre todo",
+    "meaning": "尤其，特别是"
+  },
+  {
+    "unit": 15,
+    "word": "modelo",
+    "meaning": "模样，样式",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "desear",
+    "meaning": "想，要，希望",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "pues",
+    "meaning": "那么",
+    "pos": "adv."
+  },
+  {
+    "unit": 15,
+    "word": "conocer",
+    "meaning": "认识，了解，知道",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "chico,ca",
+    "meaning": "男（女）孩（青少年）",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 15,
+    "word": "poner",
+    "meaning": "放置，安放",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "zapatería",
+    "meaning": "鞋店",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "pedir",
+    "meaning": "请求，要求；点菜",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "mostrador",
+    "meaning": "柜台",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "por",
+    "meaning": "为，代替",
+    "pos": "prep."
+  },
+  {
+    "unit": 15,
+    "word": "preguntar",
+    "meaning": "发问，提问题",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "ensalada",
+    "meaning": "沙拉，凉菜",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "dependiente",
+    "meaning": "售货员",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 15,
+    "word": "gustar",
+    "meaning": "喜欢，爱好",
+    "pos": "intr."
+  },
+  {
+    "unit": 15,
+    "word": "precio",
+    "meaning": "价钱",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "verdura",
+    "meaning": "蔬菜，青菜",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "amarillo",
+    "meaning": "黄颜色的",
+    "pos": "adj."
+  },
+  {
+    "unit": 15,
+    "word": "carne",
+    "meaning": "肉",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "mostrar",
+    "meaning": "展示，拿给……看",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "pescado",
+    "meaning": "（捕获供食用的）鱼",
+    "pos": "m."
+  },
+  {
+    "unit": 15,
+    "word": "calzar",
+    "meaning": "穿（鞋）",
+    "pos": "tr."
+  },
+  {
+    "unit": 15,
+    "word": "fruta",
+    "meaning": "水果",
+    "pos": "f."
+  },
+  {
+    "unit": 15,
+    "word": "quedarse",
+    "meaning": "留下，剩下",
+    "pos": "prnl."
+  },
+  {
+    "unit": 16,
+    "word": "de compras",
+    "meaning": "购物，买东西"
+  },
+  {
+    "unit": 16,
+    "word": "pena",
+    "meaning": "痛苦，遗憾",
+    "pos": "f."
+  },
+  {
+    "unit": 16,
+    "word": "color",
+    "meaning": "颜色",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "fin",
+    "meaning": "终结；末尾",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "oscuro",
+    "meaning": "暗的，深（色）的",
+    "pos": "adj."
+  },
+  {
+    "unit": 16,
+    "word": "septiembre",
+    "meaning": "九月",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "sacar",
+    "meaning": "取出",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "ocupado",
+    "meaning": "忙；被占用",
+    "pos": "p.p."
+  },
+  {
+    "unit": 16,
+    "word": "gris",
+    "meaning": "灰色的",
+    "pos": "adj."
+  },
+  {
+    "unit": 16,
+    "word": "pasear",
+    "meaning": "散步",
+    "pos": "intr."
+  },
+  {
+    "unit": 16,
+    "word": "probar(se)",
+    "meaning": "试，试（衣物）",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 16,
+    "word": "calle",
+    "meaning": "街道",
+    "pos": "f."
+  },
+  {
+    "unit": 16,
+    "word": "tacón",
+    "meaning": "鞋跟",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "acercarse",
+    "meaning": "走近，靠近",
+    "pos": "prnl."
+  },
+  {
+    "unit": 16,
+    "word": "caro",
+    "meaning": "贵的",
+    "pos": "adj."
+  },
+  {
+    "unit": 16,
+    "word": "escaparate",
+    "meaning": "橱窗",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "cómodo",
+    "meaning": "舒适的",
+    "pos": "adj."
+  },
+  {
+    "unit": 16,
+    "word": "apetecer",
+    "meaning": "想望，渴望",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "pagar",
+    "meaning": "付款",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "calidad",
+    "meaning": "质量",
+    "pos": "f."
+  },
+  {
+    "unit": 16,
+    "word": "caja",
+    "meaning": "付款处",
+    "pos": "f."
+  },
+  {
+    "unit": 16,
+    "word": "romper",
+    "meaning": "弄破，打破",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "parecer",
+    "meaning": "像是；使觉得",
+    "pos": "intr."
+  },
+  {
+    "unit": 16,
+    "word": "fácilmente",
+    "meaning": "容易地",
+    "pos": "adv."
+  },
+  {
+    "unit": 16,
+    "word": "café",
+    "meaning": "咖啡色（的）",
+    "pos": "m.;adj."
+  },
+  {
+    "unit": 16,
+    "word": "molestar",
+    "meaning": "打扰",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "sentir",
+    "meaning": "感觉；抱歉",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "demasiado",
+    "meaning": "太，过于",
+    "pos": "adv."
+  },
+  {
+    "unit": 16,
+    "word": "además",
+    "meaning": "此外",
+    "pos": "adv."
+  },
+  {
+    "unit": 16,
+    "word": "urgente",
+    "meaning": "紧急的",
+    "pos": "adj."
+  },
+  {
+    "unit": 16,
+    "word": "hacer el favor",
+    "meaning": "请，劳驾"
+  },
+  {
+    "unit": 16,
+    "word": "de pie",
+    "meaning": "站着"
+  },
+  {
+    "unit": 16,
+    "word": "deber",
+    "meaning": "该，欠",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "a la puerta",
+    "meaning": "在门口"
+  },
+  {
+    "unit": 16,
+    "word": "cereal",
+    "meaning": "粮食",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "asiento",
+    "meaning": "座位",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "algodón",
+    "meaning": "棉花",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "conversar",
+    "meaning": "谈话，交谈",
+    "pos": "intr."
+  },
+  {
+    "unit": 16,
+    "word": "jabón (una pastilla de)",
+    "meaning": "肥皂（一块）",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "frío",
+    "meaning": "冷",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "pasta de dientes (un tubo de)",
+    "meaning": "牙膏（一筒）"
+  },
+  {
+    "unit": 16,
+    "word": "permitir",
+    "meaning": "允许",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "frasco",
+    "meaning": "小瓶",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "presentar",
+    "meaning": "介绍",
+    "pos": "tr."
+  },
+  {
+    "unit": 16,
+    "word": "crema",
+    "meaning": "奶油，润肤膏",
+    "pos": "f."
+  },
+  {
+    "unit": 16,
+    "word": "castellamo",
+    "meaning": "卡斯蒂利亚语（西班牙语）",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "champú",
+    "meaning": "洗头膏，香波",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "Hispanoamérica",
+    "meaning": "西班牙语美洲",
+    "pos": "f."
+  },
+  {
+    "unit": 16,
+    "word": "peine",
+    "meaning": "梳子",
+    "pos": "m."
+  },
+  {
+    "unit": 16,
+    "word": "encantado",
+    "meaning": "十分高兴",
+    "pos": "p.p."
+  },
+  {
+    "unit": 17,
+    "word": "visita",
+    "meaning": "拜访，来访",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "octubre",
+    "meaning": "十月",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "mucho gusto",
+    "meaning": "很高兴，很荣幸"
+  },
+  {
+    "unit": 17,
+    "word": "invitar",
+    "meaning": "邀请",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "abogado,da",
+    "meaning": "律师",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 17,
+    "word": "sonar",
+    "meaning": "响",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "té de jazmín",
+    "meaning": "茉莉花茶"
+  },
+  {
+    "unit": 17,
+    "word": "timbre",
+    "meaning": "铃",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "coca-cola",
+    "meaning": "可口可乐",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "bienvenida",
+    "meaning": "欢迎",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "de acuerdo",
+    "meaning": "同意，行"
+  },
+  {
+    "unit": 17,
+    "word": "bienvenido",
+    "meaning": "受欢迎的",
+    "pos": "adj."
+  },
+  {
+    "unit": 17,
+    "word": "botella",
+    "meaning": "瓶子",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "quitar(se)",
+    "meaning": "去掉；脱下",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 17,
+    "word": "representar",
+    "meaning": "代表；表演",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "abrigo",
+    "meaning": "大衣",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "número",
+    "meaning": "节目",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "colgar",
+    "meaning": "悬挂",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "América Latina",
+    "meaning": "拉丁美洲"
+  },
+  {
+    "unit": 17,
+    "word": "calentar(se)",
+    "meaning": "加热",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 17,
+    "word": "enseñar",
+    "meaning": "教",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "ahora mismo",
+    "meaning": "这会儿"
+  },
+  {
+    "unit": 17,
+    "word": "bailar",
+    "meaning": "跳舞",
+    "pos": "tr.,intr."
+  },
+  {
+    "unit": 17,
+    "word": "perdonar",
+    "meaning": "原谅",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "flamenco",
+    "meaning": "吉普赛舞",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "meter(se)",
+    "meaning": "塞进；钻进",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 17,
+    "word": "acompañar",
+    "meaning": "陪伴",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "sencillo",
+    "meaning": "简单的，单纯的",
+    "pos": "adj."
+  },
+  {
+    "unit": 17,
+    "word": "mesilla",
+    "meaning": "小桌，茶几",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "sevillanas",
+    "meaning": "塞维利亚舞",
+    "pos": "f. Pl."
+  },
+  {
+    "unit": 17,
+    "word": "fondo",
+    "meaning": "深处，底部，尽头",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "como tú quieras",
+    "meaning": "随你的便"
+  },
+  {
+    "unit": 17,
+    "word": "piano",
+    "meaning": "钢琴",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "brindis",
+    "meaning": "敬酒，干杯",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "fila",
+    "meaning": "行列",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "marido",
+    "meaning": "丈夫",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "separar",
+    "meaning": "分开",
+    "pos": "tr."
+  },
+  {
+    "unit": 17,
+    "word": "yerno",
+    "meaning": "女婿",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "comedor",
+    "meaning": "餐厅，食堂",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "nuera",
+    "meaning": "媳妇",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "derecho,cha",
+    "meaning": "右边",
+    "pos": "adj."
+  },
+  {
+    "unit": 17,
+    "word": "sobrino,a",
+    "meaning": "侄子（女），外甥（女）",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 17,
+    "word": "árbol",
+    "meaning": "树",
+    "pos": "m."
+  },
+  {
+    "unit": 17,
+    "word": "Panamá",
+    "meaning": "巴拿马"
+  },
+  {
+    "unit": 17,
+    "word": "flor",
+    "meaning": "花",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "Venezuela",
+    "meaning": "委内瑞拉"
+  },
+  {
+    "unit": 17,
+    "word": "primavera",
+    "meaning": "春天",
+    "pos": "f."
+  },
+  {
+    "unit": 17,
+    "word": "Ecuador",
+    "meaning": "厄瓜多尔"
+  },
+  {
+    "unit": 17,
+    "word": "verano",
+    "meaning": "夏天",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "Barcelona",
+    "meaning": "巴塞罗那"
+  },
+  {
+    "unit": 18,
+    "word": "otoño",
+    "meaning": "秋天",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "fruto",
+    "meaning": "果实",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "Buenos Aires",
+    "meaning": "布宜诺斯艾利斯"
+  },
+  {
+    "unit": 18,
+    "word": "espacio",
+    "meaning": "空间",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "planta",
+    "meaning": "花草；楼层"
+  },
+  {
+    "unit": 18,
+    "word": "ya que",
+    "meaning": "既然"
+  },
+  {
+    "unit": 18,
+    "word": "enseguida",
+    "meaning": "马上，立刻",
+    "pos": "f."
+  },
+  {
+    "unit": 18,
+    "word": "principal",
+    "meaning": "主要的",
+    "pos": "adj."
+  },
+  {
+    "unit": 18,
+    "word": "amplio",
+    "meaning": "宽绰，宽大",
+    "pos": "adv."
+  },
+  {
+    "unit": 18,
+    "word": "conducir",
+    "meaning": "通向；引导；驾驶",
+    "pos": "tr."
+  },
+  {
+    "unit": 18,
+    "word": "patio",
+    "meaning": "院子",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "zona",
+    "meaning": "区域，地区",
+    "pos": "f."
+  },
+  {
+    "unit": 18,
+    "word": "izquierdo,da",
+    "meaning": "左边",
+    "pos": "adj."
+  },
+  {
+    "unit": 18,
+    "word": "distribuído",
+    "meaning": "分布",
+    "pos": "p.p."
+  },
+  {
+    "unit": 18,
+    "word": "piscina",
+    "meaning": "游泳池",
+    "pos": "f."
+  },
+  {
+    "unit": 18,
+    "word": "distinguir",
+    "meaning": "区分，辨别",
+    "pos": "tr."
+  },
+  {
+    "unit": 18,
+    "word": "metro",
+    "meaning": "公尺，米",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "justo",
+    "meaning": "正义的；恰好",
+    "pos": "adj.,adv."
+  },
+  {
+    "unit": 18,
+    "word": "ancho",
+    "meaning": "宽的",
+    "pos": "adj."
+  },
+  {
+    "unit": 18,
+    "word": "arriba",
+    "meaning": "上边",
+    "pos": "adv."
+  },
+  {
+    "unit": 18,
+    "word": "estudio",
+    "meaning": "书房，写字间",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "más allá",
+    "meaning": "再过去一点"
+  },
+  {
+    "unit": 18,
+    "word": "escritor,ra",
+    "meaning": "作家",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 18,
+    "word": "directamente",
+    "meaning": "直接",
+    "pos": "adv."
+  },
+  {
+    "unit": 18,
+    "word": "con frecuencia",
+    "meaning": "经常"
+  },
+  {
+    "unit": 18,
+    "word": "sala de estar",
+    "meaning": "起居室，客厅"
+  },
+  {
+    "unit": 18,
+    "word": "viajar",
+    "meaning": "旅行",
+    "pos": "intr."
+  },
+  {
+    "unit": 18,
+    "word": "enorme",
+    "meaning": "巨大的",
+    "pos": "adj."
+  },
+  {
+    "unit": 18,
+    "word": "recibir",
+    "meaning": "接受；接待",
+    "pos": "tr."
+  },
+  {
+    "unit": 18,
+    "word": "ventanal",
+    "meaning": "落地窗",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "social",
+    "meaning": "社会的",
+    "pos": "adj."
+  },
+  {
+    "unit": 18,
+    "word": "delante",
+    "meaning": "前面",
+    "pos": "adv."
+  },
+  {
+    "unit": 18,
+    "word": "intenso",
+    "meaning": "密集的，紧张的",
+    "pos": "adj."
+  },
+  {
+    "unit": 18,
+    "word": "colocado",
+    "meaning": "摆放",
+    "pos": "p.p."
+  },
+  {
+    "unit": 18,
+    "word": "balcón",
+    "meaning": "阳台",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "nocturno",
+    "meaning": "夜间的",
+    "pos": "adj."
+  },
+  {
+    "unit": 18,
+    "word": "dividir",
+    "meaning": "分开，分为",
+    "pos": "tr."
+  },
+  {
+    "unit": 18,
+    "word": "nota",
+    "meaning": "记号，符号；分数",
+    "pos": "f."
+  },
+  {
+    "unit": 18,
+    "word": "extremo",
+    "meaning": "端，极端",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "situado",
+    "meaning": "位于",
+    "pos": "p.p."
+  },
+  {
+    "unit": 18,
+    "word": "nadie",
+    "meaning": "没有（人），谁也（不，没）",
+    "pos": "pron."
+  },
+  {
+    "unit": 18,
+    "word": "cubrir",
+    "meaning": "覆盖",
+    "pos": "tr."
+  },
+  {
+    "unit": 18,
+    "word": "mejor dicho",
+    "meaning": "确切地说"
+  },
+  {
+    "unit": 18,
+    "word": "trasladar(se)",
+    "meaning": "搬动；搬家",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 18,
+    "word": "cuanto antes",
+    "meaning": "尽快，尽早"
+  },
+  {
+    "unit": 18,
+    "word": "distribución",
+    "meaning": "分布，分配，布局",
+    "pos": "f."
+  },
+  {
+    "unit": 18,
+    "word": "personal",
+    "meaning": "人事；个人的",
+    "pos": "m.;adj."
+  },
+  {
+    "unit": 18,
+    "word": "mueble",
+    "meaning": "家具",
+    "pos": "m."
+  },
+  {
+    "unit": 18,
+    "word": "apearse",
+    "meaning": "下车",
+    "pos": "prnl."
+  },
+  {
+    "unit": 19,
+    "word": "atareado",
+    "meaning": "忙碌的，多事的",
+    "pos": "p.p."
+  },
+  {
+    "unit": 19,
+    "word": "correr",
+    "meaning": "跑",
+    "pos": "intr."
+  },
+  {
+    "unit": 19,
+    "word": "cualquier",
+    "meaning": "任何一个",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "hacia",
+    "meaning": "向",
+    "pos": "prep."
+  },
+  {
+    "unit": 19,
+    "word": "ascensor",
+    "meaning": "电梯",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "noviembre",
+    "meaning": "十一月",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "subir",
+    "meaning": "上去，运上去",
+    "pos": "intr.,tr."
+  },
+  {
+    "unit": 19,
+    "word": "rapidez",
+    "meaning": "快，迅速",
+    "pos": "f."
+  },
+  {
+    "unit": 19,
+    "word": "madrugada",
+    "meaning": "清晨",
+    "pos": "f."
+  },
+  {
+    "unit": 19,
+    "word": "madrugar",
+    "meaning": "早起",
+    "pos": "intr."
+  },
+  {
+    "unit": 19,
+    "word": "coger",
+    "meaning": "拿起；乘坐",
+    "pos": "tr."
+  },
+  {
+    "unit": 19,
+    "word": "remedio",
+    "meaning": "办法；药剂",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "taxi",
+    "meaning": "出租车",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "estación",
+    "meaning": "火车站",
+    "pos": "f."
+  },
+  {
+    "unit": 19,
+    "word": "llegar",
+    "meaning": "到达",
+    "pos": "intr."
+  },
+  {
+    "unit": 19,
+    "word": "ferroviario",
+    "meaning": "铁路的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "madrugador",
+    "meaning": "早起的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "un rato",
+    "meaning": "一会儿"
+  },
+  {
+    "unit": 19,
+    "word": "ocurrir",
+    "meaning": "发生",
+    "pos": "intr."
+  },
+  {
+    "unit": 19,
+    "word": "ordenar",
+    "meaning": "命令；整理",
+    "pos": "tr."
+  },
+  {
+    "unit": 19,
+    "word": "retraso",
+    "meaning": "迟到",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "examen",
+    "meaning": "考试",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "vagón",
+    "meaning": "车厢",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "a lo mejor",
+    "meaning": "或许"
+  },
+  {
+    "unit": 19,
+    "word": "por escrito",
+    "meaning": "笔头的"
+  },
+  {
+    "unit": 19,
+    "word": "próximo",
+    "meaning": "下一个",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "metro",
+    "meaning": "地铁",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "entender",
+    "meaning": "懂得，明白",
+    "pos": "tr."
+  },
+  {
+    "unit": 19,
+    "word": "excelente",
+    "meaning": "极好的，优秀的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "tren",
+    "meaning": "火车",
+    "pos": "m."
+  },
+  {
+    "unit": 19,
+    "word": "templado",
+    "meaning": "温和的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "asistente,ta",
+    "meaning": "家庭服务员",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 19,
+    "word": "seco",
+    "meaning": "干的，干燥的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "a toda carrera",
+    "meaning": "飞快地"
+  },
+  {
+    "unit": 19,
+    "word": "lluvioso",
+    "meaning": "多雨的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "cálido",
+    "meaning": "温暖的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "asistir",
+    "meaning": "服侍；出席",
+    "pos": "tr.,intr."
+  },
+  {
+    "unit": 19,
+    "word": "húmedo",
+    "meaning": "潮湿的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "superior",
+    "meaning": "高级的",
+    "pos": "adj."
+  },
+  {
+    "unit": 19,
+    "word": "caluroso",
+    "meaning": "炎热的",
+    "pos": "adj."
+  },
+  {
+    "unit": 20,
+    "word": "hispanohablante",
+    "meaning": "讲西班牙语的",
+    "pos": "adj."
+  },
+  {
+    "unit": 20,
+    "word": "extranjero",
+    "meaning": "外国的",
+    "pos": "adj."
+  },
+  {
+    "unit": 20,
+    "word": "dictar",
+    "meaning": "口述，口授",
+    "pos": "tr."
+  },
+  {
+    "unit": 20,
+    "word": "convenir",
+    "meaning": "对（某人）合适",
+    "pos": "intr."
+  },
+  {
+    "unit": 20,
+    "word": "conferencia",
+    "meaning": "报告会，讲座",
+    "pos": "f."
+  },
+  {
+    "unit": 20,
+    "word": "importante",
+    "meaning": "重要的",
+    "pos": "adj."
+  },
+  {
+    "unit": 20,
+    "word": "diverso",
+    "meaning": "各种各样的",
+    "pos": "adj."
+  },
+  {
+    "unit": 20,
+    "word": "comprender",
+    "meaning": "懂得，明白",
+    "pos": "tr."
+  },
+  {
+    "unit": 20,
+    "word": "tema",
+    "meaning": "题目",
+    "pos": "m."
+  },
+  {
+    "unit": 20,
+    "word": "cultura",
+    "meaning": "文化",
+    "pos": "f."
+  },
+  {
+    "unit": 20,
+    "word": "desde",
+    "meaning": "从……起",
+    "pos": "prep."
+  },
+  {
+    "unit": 20,
+    "word": "cursillo",
+    "meaning": "短期讲习班",
+    "pos": "m."
+  },
+  {
+    "unit": 20,
+    "word": "hispánico",
+    "meaning": "西班牙语（国家）的",
+    "pos": "adj."
+  },
+  {
+    "unit": 20,
+    "word": "tercero",
+    "meaning": "第三",
+    "pos": "num."
+  },
+  {
+    "unit": 20,
+    "word": "tener ganas",
+    "meaning": "想，有愿望"
+  },
+  {
+    "unit": 20,
+    "word": "cuarto",
+    "meaning": "第四",
+    "pos": "num."
+  },
+  {
+    "unit": 20,
+    "word": "literatura",
+    "meaning": "文学",
+    "pos": "f."
+  },
+  {
+    "unit": 20,
+    "word": "posgrado",
+    "meaning": "研究生班",
+    "pos": "m."
+  },
+  {
+    "unit": 20,
+    "word": "latinoamericano",
+    "meaning": "拉丁美洲的",
+    "pos": "adj."
+  },
+  {
+    "unit": 20,
+    "word": "desde luego",
+    "meaning": "当然，自然"
+  },
+  {
+    "unit": 20,
+    "word": "interesar(se)",
+    "meaning": "使感兴趣，对……感兴趣",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 20,
+    "word": "veintena",
+    "meaning": "二十来个",
+    "pos": "f."
+  },
+  {
+    "unit": 20,
+    "word": "vocabulario",
+    "meaning": "词汇（量）",
+    "pos": "m."
+  },
+  {
+    "unit": 20,
+    "word": "lástima",
+    "meaning": "遗憾"
+  },
+  {
+    "unit": 20,
+    "word": "limitado",
+    "meaning": "有限的",
+    "pos": "p.p."
+  },
+  {
+    "unit": 20,
+    "word": "con mucho gusto",
+    "meaning": "很高兴，很乐意"
+  },
+  {
+    "unit": 20,
+    "word": "dificultad",
+    "meaning": "困难",
+    "pos": "f."
+  },
+  {
+    "unit": 20,
+    "word": "darse prisa",
+    "meaning": "赶紧，赶快"
+  },
+  {
+    "unit": 20,
+    "word": "confundir",
+    "meaning": "弄混",
+    "pos": "tr."
+  },
+  {
+    "unit": 20,
+    "word": "Honduras",
+    "meaning": "洪都拉斯"
+  },
+  {
+    "unit": 20,
+    "word": "apenas",
+    "meaning": "几乎不",
+    "pos": "adv."
+  },
+  {
+    "unit": 20,
+    "word": "Guatemala",
+    "meaning": "危地马拉"
+  },
+  {
+    "unit": 20,
+    "word": "importar",
+    "meaning": "对（某人）要紧或有关",
+    "pos": "intr."
+  },
+  {
+    "unit": 20,
+    "word": "apunte",
+    "meaning": "笔记",
+    "pos": "m."
+  },
+  {
+    "unit": 20,
+    "word": "Perú",
+    "meaning": "秘鲁"
+  },
+  {
+    "unit": 20,
+    "word": "cuaderno",
+    "meaning": "练习本",
+    "pos": "m."
+  },
+  {
+    "unit": 20,
+    "word": "Argentina",
+    "meaning": "阿根廷"
+  },
+  {
+    "unit": 20,
+    "word": "por lo menos",
+    "meaning": "至少"
+  },
+  {
+    "unit": 21,
+    "word": "tráfico",
+    "meaning": "（市内）交通",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "ejercicio",
+    "meaning": "练习",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "anteayer",
+    "meaning": "前天",
+    "pos": "adv."
+  },
+  {
+    "unit": 21,
+    "word": "oído",
+    "meaning": "听觉；耳朵",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "garaje",
+    "meaning": "车库",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "ponerse en camino",
+    "meaning": "上路"
+  },
+  {
+    "unit": 21,
+    "word": "autopista",
+    "meaning": "高速公路",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "a los pocos metros",
+    "meaning": "（走了）没几米"
+  },
+  {
+    "unit": 21,
+    "word": "accidente",
+    "meaning": "事故",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "producir",
+    "meaning": "发生，产生",
+    "pos": "tr."
+  },
+  {
+    "unit": 21,
+    "word": "precisamente",
+    "meaning": "恰恰是",
+    "pos": "adv."
+  },
+  {
+    "unit": 21,
+    "word": "terrible",
+    "meaning": "可怕的",
+    "pos": "adj."
+  },
+  {
+    "unit": 21,
+    "word": "atasco",
+    "meaning": "堵塞",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "desesperante",
+    "meaning": "令人绝望的",
+    "pos": "adj."
+  },
+  {
+    "unit": 21,
+    "word": "avanzar",
+    "meaning": "前进",
+    "pos": "intr."
+  },
+  {
+    "unit": 21,
+    "word": "muerto",
+    "meaning": "死人",
+    "pos": "p.p."
+  },
+  {
+    "unit": 21,
+    "word": "espera",
+    "meaning": "等待",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "herido",
+    "meaning": "受伤的",
+    "pos": "p.p."
+  },
+  {
+    "unit": 21,
+    "word": "decidir",
+    "meaning": "决定",
+    "pos": "tr."
+  },
+  {
+    "unit": 21,
+    "word": "policía",
+    "meaning": "警察",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 21,
+    "word": "aparcar",
+    "meaning": "停车",
+    "pos": "tr."
+  },
+  {
+    "unit": 21,
+    "word": "bajar",
+    "meaning": "下去",
+    "pos": "intr."
+  },
+  {
+    "unit": 21,
+    "word": "ambulancia",
+    "meaning": "救护车",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "túnel",
+    "meaning": "地道",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "testigo",
+    "meaning": "证人",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "suerte",
+    "meaning": "运气",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "comisaría",
+    "meaning": "警察局",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "andén",
+    "meaning": "站台",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "parada",
+    "meaning": "（市内）车站",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "a menudo",
+    "meaning": "经常"
+  },
+  {
+    "unit": 21,
+    "word": "de repente",
+    "meaning": "突然"
+  },
+  {
+    "unit": 21,
+    "word": "a causa de",
+    "meaning": "由于"
+  },
+  {
+    "unit": 21,
+    "word": "avisar",
+    "meaning": "通知",
+    "pos": "tr."
+  },
+  {
+    "unit": 21,
+    "word": "poco a poco",
+    "meaning": "慢慢地"
+  },
+  {
+    "unit": 21,
+    "word": "avería",
+    "meaning": "故障，损伤",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "seguir",
+    "meaning": "继续",
+    "pos": "tr.,intr."
+  },
+  {
+    "unit": 21,
+    "word": "prohibir",
+    "meaning": "禁止",
+    "pos": "tr."
+  },
+  {
+    "unit": 21,
+    "word": "adelante",
+    "meaning": "向前",
+    "pos": "adv."
+  },
+  {
+    "unit": 21,
+    "word": "resignado",
+    "meaning": "忍耐",
+    "pos": "p.p."
+  },
+  {
+    "unit": 21,
+    "word": "preciso",
+    "meaning": "必须；精确的",
+    "pos": "adj."
+  },
+  {
+    "unit": 21,
+    "word": "ceder",
+    "meaning": "让（座位等）",
+    "pos": "tr."
+  },
+  {
+    "unit": 21,
+    "word": "demás",
+    "meaning": "其他的",
+    "pos": "adj"
+  },
+  {
+    "unit": 21,
+    "word": "cuidado",
+    "meaning": "小心，注意",
+    "pos": "m."
+  },
+  {
+    "unit": 21,
+    "word": "pasajero,ra",
+    "meaning": "乘客",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 21,
+    "word": "andar",
+    "meaning": "走路",
+    "pos": "intr."
+  },
+  {
+    "unit": 21,
+    "word": "plazoleta",
+    "meaning": "小广场",
+    "pos": "f."
+  },
+  {
+    "unit": 21,
+    "word": "cola",
+    "meaning": "（购物等）排的队",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "infancia",
+    "meaning": "童年",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "tardar",
+    "meaning": "耽搁，花费（时间）",
+    "pos": "intr."
+  },
+  {
+    "unit": 22,
+    "word": "tipico",
+    "meaning": "典型的",
+    "pos": "adj."
+  },
+  {
+    "unit": 22,
+    "word": "esquina",
+    "meaning": "拐角",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "campesino,na",
+    "meaning": "农民",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 22,
+    "word": "abrazar",
+    "meaning": "拥抱",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "huerto",
+    "meaning": "园子",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "recién",
+    "meaning": "新近地",
+    "pos": "adv."
+  },
+  {
+    "unit": 22,
+    "word": "cultivar",
+    "meaning": "种植",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "excusar(se)",
+    "meaning": "原谅；致歉",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 22,
+    "word": "hortaliza",
+    "meaning": "（种在园子里的）蔬菜",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "fiesta",
+    "meaning": "节日，庆祝聚会",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "orilla",
+    "meaning": "岸边",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "pueblo",
+    "meaning": "人民；村镇",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "río",
+    "meaning": "河",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "escuchar",
+    "meaning": "听",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "parcela",
+    "meaning": "（一小块）田地",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "colegio mayor",
+    "meaning": "学生公寓"
+  },
+  {
+    "unit": 22,
+    "word": "trigal",
+    "meaning": "麦田",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "especie",
+    "meaning": "种类",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "atravesar",
+    "meaning": "穿过",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "hotel",
+    "meaning": "旅馆，饭店",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "soler",
+    "meaning": "惯常（做某事）",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "hostal",
+    "meaning": "客店",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "jugar",
+    "meaning": "玩",
+    "pos": "intr."
+  },
+  {
+    "unit": 22,
+    "word": "compartir",
+    "meaning": "共享",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "nadar",
+    "meaning": "游泳",
+    "pos": "intr."
+  },
+  {
+    "unit": 22,
+    "word": "bosque",
+    "meaning": "森林",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "alquiler",
+    "meaning": "房租",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "divertirse",
+    "meaning": "娱乐，消遣",
+    "pos": "prnl."
+  },
+  {
+    "unit": 22,
+    "word": "repartir",
+    "meaning": "分摊",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "atardecer",
+    "meaning": "黄昏降临，黄昏",
+    "pos": "intr.;m."
+  },
+  {
+    "unit": 22,
+    "word": "cocinar",
+    "meaning": "作饭，烹饪",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "tranquilo",
+    "meaning": "安静的",
+    "pos": "adj."
+  },
+  {
+    "unit": 22,
+    "word": "ambiente",
+    "meaning": "气氛，氛围",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "cada vez que",
+    "meaning": "每次"
+  },
+  {
+    "unit": 22,
+    "word": "internacional",
+    "meaning": "国际的",
+    "pos": "adj."
+  },
+  {
+    "unit": 22,
+    "word": "saludable",
+    "meaning": "健康的",
+    "pos": "adj."
+  },
+  {
+    "unit": 22,
+    "word": "raza",
+    "meaning": "种族，人种",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "sorpresa",
+    "meaning": "惊喜，惊奇",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "blanco,a",
+    "meaning": "白人",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 22,
+    "word": "beca",
+    "meaning": "奖学金",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "negro,a",
+    "meaning": "黑人",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 22,
+    "word": "curso",
+    "meaning": "学年，课程",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "mestizo,a",
+    "meaning": "印欧混血种",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 22,
+    "word": "prórroga",
+    "meaning": "延长",
+    "pos": "f."
+  },
+  {
+    "unit": 22,
+    "word": "mulato,a",
+    "meaning": "黑白混血种",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 22,
+    "word": "de modo que",
+    "meaning": "因此"
+  },
+  {
+    "unit": 22,
+    "word": "asiático,ca",
+    "meaning": "亚洲人；亚洲的",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 22,
+    "word": "entero",
+    "meaning": "整个的",
+    "pos": "adj."
+  },
+  {
+    "unit": 22,
+    "word": "rígido",
+    "meaning": "僵硬的，严格的",
+    "pos": "adj."
+  },
+  {
+    "unit": 22,
+    "word": "sol",
+    "meaning": "太阳",
+    "pos": "m."
+  },
+  {
+    "unit": 22,
+    "word": "perder",
+    "meaning": "失去",
+    "pos": "tr."
+  },
+  {
+    "unit": 22,
+    "word": "fuente",
+    "meaning": "泉水，喷泉",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "vuelta",
+    "meaning": "一圈",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "mientras",
+    "meaning": "与……同时",
+    "pos": "conj."
+  },
+  {
+    "unit": 23,
+    "word": "desconocido",
+    "meaning": "陌生的；陌生人",
+    "pos": "p.p."
+  },
+  {
+    "unit": 23,
+    "word": "lentamente",
+    "meaning": "慢慢地",
+    "pos": "adv."
+  },
+  {
+    "unit": 23,
+    "word": "museo",
+    "meaning": "博物馆",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "cuento",
+    "meaning": "故事",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "parque",
+    "meaning": "公园",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "contar",
+    "meaning": "讲述；数数",
+    "pos": "tr."
+  },
+  {
+    "unit": 23,
+    "word": "estilo",
+    "meaning": "风格",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "chiste",
+    "meaning": "笑话",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "alojarse",
+    "meaning": "住宿",
+    "pos": "prnl."
+  },
+  {
+    "unit": 23,
+    "word": "arquitectónico",
+    "meaning": "建筑的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "alojamiento",
+    "meaning": "住宿",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "gótico",
+    "meaning": "歌特式的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "Sancho Panza",
+    "meaning": "桑丘.潘沙"
+  },
+  {
+    "unit": 23,
+    "word": "barroco",
+    "meaning": "巴罗克式的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "inmortal",
+    "meaning": "不朽的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "neo-clásico",
+    "meaning": "新古典主义的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "carnet",
+    "meaning": "（身份，学生）证",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "obra",
+    "meaning": "作品",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "entrada",
+    "meaning": "进入，入口，门票",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "señalar",
+    "meaning": "指出",
+    "pos": "tr."
+  },
+  {
+    "unit": 23,
+    "word": "gratis",
+    "meaning": "免费",
+    "pos": "adv."
+  },
+  {
+    "unit": 23,
+    "word": "puesto",
+    "meaning": "小摊",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "turista",
+    "meaning": "旅游者",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 23,
+    "word": "acera",
+    "meaning": "人行道",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "argentino,na",
+    "meaning": "阿根廷人；阿根廷的",
+    "pos": "m.,f.;adj."
+  },
+  {
+    "unit": 23,
+    "word": "guía",
+    "meaning": "导游；导游手册",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 23,
+    "word": "conseguir",
+    "meaning": "得到，弄到",
+    "pos": "tr."
+  },
+  {
+    "unit": 23,
+    "word": "resultar",
+    "meaning": "结果是……",
+    "pos": "intr."
+  },
+  {
+    "unit": 23,
+    "word": "caminar",
+    "meaning": "走路",
+    "pos": "tr."
+  },
+  {
+    "unit": 23,
+    "word": "complicado",
+    "meaning": "复杂的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "alguien",
+    "meaning": "有人",
+    "pos": "pron."
+  },
+  {
+    "unit": 23,
+    "word": "ser",
+    "meaning": "生灵，人",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "cabeza",
+    "meaning": "头",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "planeta",
+    "meaning": "行星，星球",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "asombrar(se)",
+    "meaning": "使吃惊；吃惊",
+    "pos": "tr.;prnl."
+  },
+  {
+    "unit": 23,
+    "word": "no es para tanto",
+    "meaning": "不至于如此"
+  },
+  {
+    "unit": 23,
+    "word": "Museo del Prado",
+    "meaning": "普拉多博物馆"
+  },
+  {
+    "unit": 23,
+    "word": "anteanoche",
+    "meaning": "前天晚上",
+    "pos": "adv."
+  },
+  {
+    "unit": 23,
+    "word": "idea",
+    "meaning": "主意，想法",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "palacio",
+    "meaning": "宫殿",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "exposición",
+    "meaning": "展览",
+    "pos": "f."
+  },
+  {
+    "unit": 23,
+    "word": "Palacio Imperial",
+    "meaning": "故宫"
+  },
+  {
+    "unit": 23,
+    "word": "inmenso",
+    "meaning": "广阔的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "especial",
+    "meaning": "特别的",
+    "pos": "adj."
+  },
+  {
+    "unit": 23,
+    "word": "plano",
+    "meaning": "平面图",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "Goya",
+    "meaning": "戈雅"
+  },
+  {
+    "unit": 23,
+    "word": "principio",
+    "meaning": "开始；原则",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "dicho y hecho",
+    "meaning": "说干就干"
+  },
+  {
+    "unit": 23,
+    "word": "mapa",
+    "meaning": "地图",
+    "pos": "m."
+  },
+  {
+    "unit": 23,
+    "word": "marchar",
+    "meaning": "行进",
+    "pos": "intr."
+  },
+  {
+    "unit": 24,
+    "word": "carnicero,ra",
+    "meaning": "屠夫",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 24,
+    "word": "visitante",
+    "meaning": "来访者，参观者",
+    "pos": "m.,f."
+  },
+  {
+    "unit": 24,
+    "word": "adaptación",
+    "meaning": "改编，节选",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "al azar",
+    "meaning": "偶然，随意"
+  },
+  {
+    "unit": 24,
+    "word": "fábula",
+    "meaning": "寓言",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "cruzar",
+    "meaning": "穿过",
+    "pos": "tr."
+  },
+  {
+    "unit": 24,
+    "word": "Esopo",
+    "meaning": "伊索"
+  },
+  {
+    "unit": 24,
+    "word": "plaza",
+    "meaning": "广场",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "asno",
+    "meaning": "驴子",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "monumento",
+    "meaning": "纪念碑",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "pastar",
+    "meaning": "放牧，（牲畜）吃草",
+    "pos": "tr.,intr."
+  },
+  {
+    "unit": 24,
+    "word": "erigido",
+    "meaning": "竖立，矗立",
+    "pos": "p.p."
+  },
+  {
+    "unit": 24,
+    "word": "tranquilamente",
+    "meaning": "安安静静地",
+    "pos": "adv."
+  },
+  {
+    "unit": 24,
+    "word": "prado",
+    "meaning": "草地",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "en memoria de",
+    "meaning": "纪念碑"
+  },
+  {
+    "unit": 24,
+    "word": "lobo",
+    "meaning": "狼",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "Cervantes",
+    "meaning": "塞万提斯"
+  },
+  {
+    "unit": 24,
+    "word": "huir",
+    "meaning": "逃跑",
+    "pos": "intr."
+  },
+  {
+    "unit": 24,
+    "word": "busto",
+    "meaning": "半身塑像",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "miedo",
+    "meaning": "害怕",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "don Quijote",
+    "meaning": "堂.吉诃德"
+  },
+  {
+    "unit": 24,
+    "word": "cojo",
+    "meaning": "雀，拐",
+    "pos": "adj."
+  },
+  {
+    "unit": 24,
+    "word": "ocurrírsele (a uno) algo",
+    "meaning": "突发奇想"
+  },
+  {
+    "unit": 24,
+    "word": "aproximar(se)",
+    "meaning": "使靠近；靠近",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 24,
+    "word": "fingir(se)",
+    "meaning": "假装",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 24,
+    "word": "cojear",
+    "meaning": "一雀一拐",
+    "pos": "intr."
+  },
+  {
+    "unit": 24,
+    "word": "boca",
+    "meaning": "嘴",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "responder",
+    "meaning": "回答",
+    "pos": "tr."
+  },
+  {
+    "unit": 24,
+    "word": "razón",
+    "meaning": "道理，理智",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "saltar",
+    "meaning": "跳",
+    "pos": "intr."
+  },
+  {
+    "unit": 24,
+    "word": "pata",
+    "meaning": "蹄子",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "cerca",
+    "meaning": "栅栏",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "examinar",
+    "meaning": "检查",
+    "pos": "tr."
+  },
+  {
+    "unit": 24,
+    "word": "clavar",
+    "meaning": "钉进，扎进",
+    "pos": "tr."
+  },
+  {
+    "unit": 24,
+    "word": "atentamente",
+    "meaning": "专心致志",
+    "pos": "adv."
+  },
+  {
+    "unit": 24,
+    "word": "espina",
+    "meaning": "刺",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "pie",
+    "meaning": "脚",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "casco",
+    "meaning": "蹄甲",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "hinchado",
+    "meaning": "肿胀",
+    "pos": "p.p."
+  },
+  {
+    "unit": 24,
+    "word": "feroz",
+    "meaning": "凶猛的，凶狠的",
+    "pos": "adj."
+  },
+  {
+    "unit": 24,
+    "word": "devorar",
+    "meaning": "吞食",
+    "pos": "tr."
+  },
+  {
+    "unit": 24,
+    "word": "coz",
+    "meaning": "踢（一下）",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "arrancar",
+    "meaning": "拔除",
+    "pos": "tr."
+  },
+  {
+    "unit": 24,
+    "word": "maltratado",
+    "meaning": "受虐待的",
+    "pos": "p.p."
+  },
+  {
+    "unit": 24,
+    "word": "resistir",
+    "meaning": "抵抗，抗拒",
+    "pos": "intr."
+  },
+  {
+    "unit": 24,
+    "word": "merecer(se)",
+    "meaning": "应该得到",
+    "pos": "tr.,prnl."
+  },
+  {
+    "unit": 24,
+    "word": "clemencia",
+    "meaning": "宽容，仁慈",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "oficio",
+    "meaning": "行当",
+    "pos": "m."
+  },
+  {
+    "unit": 24,
+    "word": "fama",
+    "meaning": "名声",
+    "pos": "f."
+  },
+  {
+    "unit": 24,
+    "word": "meterse de",
+    "meaning": "滥竽充数干某事"
+  },
+  {
+    "unit": 24,
+    "word": "cruel",
+    "meaning": "残忍的",
+    "pos": "adj."
+  }
+]
