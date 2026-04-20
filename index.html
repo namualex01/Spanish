@@ -1402,6 +1402,8 @@
       state.lyricLineIndex = Math.floor(Math.random() * song.lines.length);
       state.lyricReveal = false;
       renderLyrics();
+      els.detailCard.classList.toggle('hidden', state.currentMode === 'flash');
+      persistProgressStore();
     }
 
     function resetSpellBox() {
