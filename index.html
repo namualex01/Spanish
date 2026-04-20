@@ -599,6 +599,7 @@
             <label class="toggle"><input id="shuffleToggle" type="checkbox" /> 随机顺序</label>
             <label class="toggle"><input id="autoSpeakToggle" type="checkbox" /> 切卡自动朗读</label>
             <label class="toggle"><input id="showNoteToggle" type="checkbox" checked /> 显示备注/例句</label>
+            <label class="toggle"><input id="showDetailToggle" type="checkbox" checked /> 显示当前词条信息</label>
             <label class="toggle"><input id="onlyWrongToggle" type="checkbox" /> 仅复习答错词</label>
           </div>
         </div>
@@ -703,6 +704,32 @@
         </div>
 
         <div class="side-card">
+          <h3>西语歌词学习</h3>
+          <div class="list" style="margin-bottom:10px;">
+            <label class="toggle" for="lyricImport">导入歌词 JSON</label>
+            <input class="hidden" id="lyricImport" type="file" accept="application/json,.json" />
+          </div>
+          <div class="field full" style="margin-bottom:10px;">
+            <label for="lyricSongSelect">歌曲</label>
+            <select id="lyricSongSelect">
+              <option value="">未导入</option>
+            </select>
+          </div>
+          <div class="action-row" style="margin-bottom:10px;">
+            <button class="btn" id="lyricPrevBtn" type="button">上一句</button>
+            <button class="btn" id="lyricNextBtn" type="button">下一句</button>
+            <button class="btn" id="lyricRandomBtn" type="button">随机</button>
+          </div>
+          <div class="mini-item">
+            <strong id="lyricLineEs">导入后开始学习歌词</strong>
+            <div class="muted" id="lyricLineZh">支持西语/中文双语行。</div>
+            <div class="action-row" style="margin-top:8px;">
+              <button class="btn" id="lyricRevealBtn" type="button">显示翻译</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-card">
           <h3>使用说明</h3>
           <div class="tips">
             <div class="mini-item"><strong>1. 放文件</strong><div class="muted">把本页命名为 <span class="code">index.html</span>，和 4 个 JSON 放进同一个文件夹。</div></div>
@@ -760,6 +787,7 @@
       shuffle: false,
       autoSpeak: false,
       showNote: true,
+      showDetail: true,
       onlyWrong: false,
       currentIndex: 0,
       answerVisible: false,
@@ -782,6 +810,7 @@
       shuffleToggle: $('shuffleToggle'),
       autoSpeakToggle: $('autoSpeakToggle'),
       showNoteToggle: $('showNoteToggle'),
+      showDetailToggle: $('showDetailToggle'),
       onlyWrongToggle: $('onlyWrongToggle'),
       reloadBtn: $('reloadBtn'),
       resetProgressBtn: $('resetProgressBtn'),
@@ -813,7 +842,15 @@
       detailCard: $('detailCard'),
       detailList: $('detailList'),
       wrongList: $('wrongList'),
-      progressBar: $('progressBar')
+      progressBar: $('progressBar'),
+      lyricImport: $('lyricImport'),
+      lyricSongSelect: $('lyricSongSelect'),
+      lyricPrevBtn: $('lyricPrevBtn'),
+      lyricNextBtn: $('lyricNextBtn'),
+      lyricRandomBtn: $('lyricRandomBtn'),
+      lyricRevealBtn: $('lyricRevealBtn'),
+      lyricLineEs: $('lyricLineEs'),
+      lyricLineZh: $('lyricLineZh')
     };
 
     function buildFilterKey() {
@@ -1093,9 +1130,14 @@
         };
       }
 
+      const isSpellMode = state.currentMode === 'spell';
       const isEsToZh = state.currentDirection === 'es-zh';
-      const prompt = isEsToZh ? (word.spanish || '（无西语字段）') : (word.chinese || '（无中文字段）');
-      const answer = isEsToZh ? (word.chinese || '（无中文字段）') : (word.spanish || '（无西语字段）');
+      const prompt = isSpellMode
+        ? (word.chinese || '（无中文字段）')
+        : (isEsToZh ? (word.spanish || '（无西语字段）') : (word.chinese || '（无中文字段）'));
+      const answer = isSpellMode
+        ? (word.spanish || '（无西语字段）')
+        : (isEsToZh ? (word.chinese || '（无中文字段）') : (word.spanish || '（无西语字段）'));
       const subParts = [];
       if (word.ipa) subParts.push(`音标：${word.ipa}`);
       if (word.pos) subParts.push(`词性：${word.pos}`);
@@ -1104,7 +1146,9 @@
       return {
         tag: `${getBookName(word.bookId)} · Unit ${word.unit}`,
         prompt,
-        promptSubtext: subParts.join('  ·  ') || '可点击“朗读当前单词”播放西语发音。',
+        promptSubtext: isSpellMode
+          ? '请根据题面输入对应的西语拼写。'
+          : (subParts.join('  ·  ') || '可点击“朗读当前单词”播放西语发音。'),
         answer
       };
     }
@@ -1282,7 +1326,7 @@
       const word = getCurrentWord();
       if (!word) return;
       const userValue = normalizeSpell(els.spellInput.value);
-      const correctAnswer = normalizeSpell(state.currentDirection === 'es-zh' ? word.chinese : word.spanish);
+      const correctAnswer = normalizeSpell(word.spanish);
       if (!userValue) {
         els.spellFeedback.textContent = '请先输入答案。';
         els.spellFeedback.className = 'feedback bad';
@@ -1373,6 +1417,11 @@
         renderDetails();
       });
 
+      els.showDetailToggle.addEventListener('change', () => {
+        state.showDetail = els.showDetailToggle.checked;
+        renderAll();
+      });
+
       els.onlyWrongToggle.addEventListener('change', () => {
         state.onlyWrong = els.onlyWrongToggle.checked;
         applyFilters(true);
@@ -1407,6 +1456,21 @@
       ['1','2','3','4'].forEach((id) => {
         const input = document.getElementById(`fileImport${id}`);
         input.addEventListener('change', (event) => importLibraryFromFile(id, event.target.files[0]));
+      });
+
+      els.lyricImport.addEventListener('change', (event) => importLyricsFromFile(event.target.files[0]));
+      els.lyricSongSelect.addEventListener('change', () => {
+        state.lyricSongIndex = Number(els.lyricSongSelect.value) || 0;
+        state.lyricLineIndex = 0;
+        state.lyricReveal = false;
+        renderLyrics();
+      });
+      els.lyricPrevBtn.addEventListener('click', () => stepLyric(-1));
+      els.lyricNextBtn.addEventListener('click', () => stepLyric(1));
+      els.lyricRandomBtn.addEventListener('click', randomLyric);
+      els.lyricRevealBtn.addEventListener('click', () => {
+        state.lyricReveal = !state.lyricReveal;
+        renderLyrics();
       });
 
       document.addEventListener('keydown', (event) => {
